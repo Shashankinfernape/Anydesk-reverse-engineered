@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/abook_roster_container" android:background="@drawable/abook_card_item_ripple_background" android:padding="8.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatRadioButton android:layout_gravity="start" android:id="@id/abook_roster_radio_button" android:padding="8.0dip" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="fill_parent" app:buttonTint="@color/colorAbookCardText" />
+    <TextView android:textSize="17.0sp" android:textColor="@color/colorAbookCardText" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="start" android:id="@id/abook_roster_name" android:padding="8.0dip" android:focusable="false" android:clickable="false" android:layout_width="0.0dip" android:layout_height="fill_parent" android:maxLines="1" android:layout_weight="1.0" />
+</LinearLayout>

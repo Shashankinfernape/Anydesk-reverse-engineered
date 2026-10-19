@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/colorDialogText" android:id="@id/network_info_busy_activity" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minLines="2" />
+    <TextView android:id="@id/network_info_busy_relay_header" style="@style/NetworkInfoHeader" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/network_info_busy_relays" style="@style/NetworkInfoRecyclerView" />
+    <TextView android:id="@id/network_info_busy_method_header" style="@style/NetworkInfoHeader" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/network_info_busy_methods" style="@style/NetworkInfoRecyclerView" />
+    <LinearLayout android:orientation="vertical" android:id="@id/network_info_busy_proxy_section" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/network_info_busy_proxy_header" style="@style/NetworkInfoHeader" />
+        <include android:id="@id/network_info_busy_proxy_discovering" layout="@layout/network_info_busy_item" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/network_info_busy_proxies" style="@style/NetworkInfoRecyclerView" />
+    </LinearLayout>
+</LinearLayout>

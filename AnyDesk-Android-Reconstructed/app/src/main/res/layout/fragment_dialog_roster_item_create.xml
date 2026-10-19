@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/abook_roster_item_create_layout" android:padding="@dimen/dialog_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="@color/colorDialogText" android:id="@id/abook_roster_item_create_name_input_title" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_input_margin_top" android:textIsSelectable="true" />
+    <com.anydesk.anydeskandroid.gui.element.AdEditText android:id="@id/abook_roster_item_create_name_input" android:layout_width="fill_parent" android:layout_height="wrap_content" app:imeOptions="actionNext" app:textColor="@color/colorDialogText" app:textSize="@dimen/dialog_input_font_size" />
+    <TextView android:textColor="@color/colorDialogText" android:id="@id/abook_roster_item_create_addr_input_title" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_input_margin_top" android:textIsSelectable="true" />
+    <com.anydesk.anydeskandroid.gui.element.AdEditText android:id="@id/abook_roster_item_create_addr_input" android:layout_width="fill_parent" android:layout_height="wrap_content" app:textColor="@color/colorDialogText" app:textSize="@dimen/dialog_input_font_size" />
+</LinearLayout>

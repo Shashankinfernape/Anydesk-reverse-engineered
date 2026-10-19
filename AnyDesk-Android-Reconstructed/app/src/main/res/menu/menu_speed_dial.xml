@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu android:id="@id/menu_speed_dial"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/dial_alias" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/dial_id" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/dial_rename" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/dial_delete" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/dial_favorite" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/dial_install_shortcut" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/dial_browse_files" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/dial_vpn" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/dial_tcp_tunneling" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/dial_chat_history" android:orderInCategory="100" app:showAsAction="never" />
+</menu>

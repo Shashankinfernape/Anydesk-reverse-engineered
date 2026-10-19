@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/session_info_scroll_view" android:background="@color/colorMainBackground" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/session_info_content" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/session_info_permissions" />
+        <TableLayout android:orientation="vertical" android:id="@id/session_info_fixed_blocks" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/session_info_body_margin" android:layout_marginRight="@dimen/session_info_body_margin" android:stretchColumns="0" android:shrinkColumns="0" android:layout_marginHorizontal="@dimen/session_info_body_margin" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:textColor="@color/colorSessionInfoIcon" android:id="@id/session_info_sysinfo_status" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:textIsSelectable="true" />
+        <TableLayout android:orientation="vertical" android:id="@id/session_info_sysinfo_blocks" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/session_info_body_margin" android:layout_marginRight="@dimen/session_info_body_margin" android:stretchColumns="0" android:shrinkColumns="0" android:layout_marginHorizontal="@dimen/session_info_body_margin" />
+    </LinearLayout>
+</ScrollView>

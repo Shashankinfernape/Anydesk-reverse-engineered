@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow android:orientation="horizontal" android:id="@id/session_info_block_item_row" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/session_info_block_item_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/colorSessionInfoIcon" android:id="@id/session_info_block_item_key" android:focusable="false" android:layout_width="120.0dip" android:layout_height="wrap_content" android:textIsSelectable="true" />
+    <TextView android:id="@id/session_info_block_item_value" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="true" />
+</TableRow>

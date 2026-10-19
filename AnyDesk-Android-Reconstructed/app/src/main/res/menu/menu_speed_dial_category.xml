@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu android:id="@id/menu_speed_dial_category"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_view_dial_all_devices_inactive" android:id="@id/dial_category_all" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_view_dial_star_inactive" android:id="@id/dial_category_favorite" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_view_dial_recent_inactive" android:id="@id/dial_category_recent" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_view_dial_discover_inactive" android:id="@id/dial_category_discover" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+</menu>

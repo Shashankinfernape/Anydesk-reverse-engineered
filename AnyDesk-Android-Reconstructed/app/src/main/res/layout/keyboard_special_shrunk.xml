@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="bottom|center" android:id="@id/keyboard_special_shrunk" android:background="@color/colorConnectionSpecialKeyboard" android:padding="@dimen/kbs_margin" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <GridLayout android:layout_gravity="center" android:id="@id/kbs_shrunk_button_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0.0dip" android:rowCount="1" android:columnCount="5" android:useDefaultMargins="false">
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_shrunk_button_back" app:srcCompat="@drawable/ic_key_back" style="@style/SpecialKeyboardImageButton" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_shrunk_button_home" app:srcCompat="@drawable/ic_key_home" style="@style/SpecialKeyboardImageButton" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_shrunk_button_apps" app:srcCompat="@drawable/ic_key_apps" style="@style/SpecialKeyboardImageButton" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_shrunk_button_menu" app:srcCompat="@drawable/ic_key_menu" style="@style/SpecialKeyboardImageButton" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_shrunk_button_power" app:srcCompat="@drawable/ic_key_power" style="@style/SpecialKeyboardImageButton" />
+    </GridLayout>
+</FrameLayout>

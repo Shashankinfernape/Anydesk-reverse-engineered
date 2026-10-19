@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/dialog_account_verification_pending_scroll_view_container" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.anydesk.anydeskandroid.gui.element.ListenerScrollView android:id="@id/dialog_account_verification_pending_scroll_view" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fadeScrollbars="false">
+        <LinearLayout android:orientation="vertical" android:id="@id/dialog_account_verification_pending_layout" android:padding="@dimen/dialog_padding" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.material.progressindicator.LinearProgressIndicator android:id="@id/dialog_account_verification_pending_indicator" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0sp" android:layout_marginRight="4.0sp" android:indeterminate="true" app:trackCornerRadius="2.0dip" app:trackThickness="5.0dip" />
+            <TextView android:textColor="@color/colorDialogText" android:id="@id/dialog_account_verification_pending_message" android:padding="8.0dip" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textColor="@color/dialog_link_color" android:id="@id/dialog_account_verification_pending_resend_link" android:padding="8.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.anydesk.anydeskandroid.gui.element.ListenerScrollView>
+    <ImageView android:layout_gravity="center|top" android:id="@id/dialog_account_verification_pending_scroll_hint_top" android:focusable="false" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_scroll_hint_top" />
+    <ImageView android:layout_gravity="bottom|center" android:id="@id/dialog_account_verification_pending_scroll_hint_bottom" android:focusable="false" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_scroll_hint_bottom" />
+</FrameLayout>

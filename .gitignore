@@ -1,0 +1,27 @@
+# Build outputs
+build/
+build_msvc32/
+bin/
+obj/
+*.obj
+*.ilk
+*.pdb
+*.tlog
+*.log
+
+# Gradle & Android
+.gradle/
+.idea/
+local.properties
+*.idsig
+app/build/
+apktool_src/build/
+
+# Release folder (binaries distributed via GitHub Releases)
+release/
+*.apk
+*.exe
+
+# OS generated
+.DS_Store
+Thumbs.db

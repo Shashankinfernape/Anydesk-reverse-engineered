@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@id/dial_card" android:focusable="true" android:clickable="true" android:descendantFocusability="beforeDescendants" android:layout_width="@dimen/speed_dial_item_small_width" android:layout_height="@dimen/speed_dial_item_small_height" android:layout_marginLeft="@dimen/speed_dial_item_small_horizontal_margin" android:layout_marginTop="@dimen/speed_dial_item_small_top_margin" android:layout_marginRight="@dimen/speed_dial_item_small_horizontal_margin" android:layout_marginBottom="@dimen/speed_dial_item_small_bottom_margin" android:stateListAnimator="@animator/card_state_list_animator" app:cardCornerRadius="@dimen/speed_dial_item_corner_radius" app:cardElevation="@dimen/speed_dial_card_elevation" app:cardPreventCornerOverlap="false" app:contentPadding="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/motd_background" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/motd_image" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

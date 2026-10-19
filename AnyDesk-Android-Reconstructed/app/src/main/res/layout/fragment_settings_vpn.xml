@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/settings_vpn_scroll_view" android:background="@color/colorMainBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/settings_vpn_container" style="@style/SettingsGroupStyle">
+        <LinearLayout android:id="@id/settings_vpn_auto_start_layout" style="@style/SettingsLineStyle">
+            <TextView android:id="@id/settings_vpn_auto_start_description" style="@style/SettingsDescriptionHorizontalStyle" />
+            <CheckBox android:id="@id/settings_vpn_auto_start_checkbox" style="@style/SettingsCheckboxStyle" />
+        </LinearLayout>
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+        <LinearLayout android:id="@id/settings_vpn_start_ip" style="@style/SettingsVerticalStyle">
+            <TextView android:id="@id/settings_vpn_start_ip_description" style="@style/SettingsDescriptionVerticalStyle" />
+            <TextView android:id="@id/settings_vpn_start_ip_value" style="@style/SettingsValueVerticalStyle" />
+        </LinearLayout>
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+        <LinearLayout android:id="@id/settings_vpn_netmask" style="@style/SettingsVerticalStyle">
+            <TextView android:id="@id/settings_vpn_netmask_description" style="@style/SettingsDescriptionVerticalStyle" />
+            <TextView android:id="@id/settings_vpn_netmask_value" style="@style/SettingsValueVerticalStyle" />
+        </LinearLayout>
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+    </LinearLayout>
+</ScrollView>

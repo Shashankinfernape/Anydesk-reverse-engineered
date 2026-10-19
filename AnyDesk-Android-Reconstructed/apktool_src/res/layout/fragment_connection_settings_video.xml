@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/connection_settings_video_scroll_view" android:background="@color/colorMainBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/connection_settings_video_container" style="@style/SettingsGroupStyle">
+        <TextView android:id="@id/connection_settings_video_title_quality" style="@style/SettingsTitleStyle" />
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+        <LinearLayout android:id="@id/connection_settings_video_quality_layout" style="@style/SettingsRadioGroupStyle">
+            <LinearLayout android:id="@id/connection_settings_video_quality_best_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/connection_settings_video_quality_best_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <RadioButton android:id="@id/connection_settings_video_quality_best_radiobutton" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/connection_settings_video_quality_balanced_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/connection_settings_video_quality_balanced_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <RadioButton android:id="@id/connection_settings_video_quality_balanced_radiobutton" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/connection_settings_video_quality_fast_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/connection_settings_video_quality_fast_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <RadioButton android:id="@id/connection_settings_video_quality_fast_radiobutton" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+        <LinearLayout android:id="@id/connection_settings_video_adaptive_quality_layout" style="@style/SettingsLineStyle">
+            <TextView android:id="@id/connection_settings_video_adaptive_quality_description" style="@style/SettingsDescriptionHorizontalStyle" />
+            <CheckBox android:id="@id/connection_settings_video_adaptive_quality_checkbox" style="@style/SettingsCheckboxStyle" />
+        </LinearLayout>
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+        <LinearLayout android:id="@id/connection_settings_video_lossless_quality_layout" style="@style/SettingsLineStyle">
+            <TextView android:id="@id/connection_settings_video_lossless_quality_description" style="@style/SettingsDescriptionHorizontalStyle" />
+            <CheckBox android:id="@id/connection_settings_video_lossless_quality_checkbox" style="@style/SettingsCheckboxStyle" />
+        </LinearLayout>
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+        <TextView android:id="@id/connection_settings_video_title_remote_cursor" style="@style/SettingsTitleStyle" />
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+        <LinearLayout android:id="@id/connection_settings_video_remote_cursor_layout" style="@style/SettingsRadioGroupStyle">
+            <LinearLayout android:id="@id/connection_settings_video_remote_cursor_hide_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/connection_settings_video_remote_cursor_hide_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <RadioButton android:id="@id/connection_settings_video_remote_cursor_hide_radiobutton" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/connection_settings_video_remote_cursor_show_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/connection_settings_video_remote_cursor_show_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <RadioButton android:id="@id/connection_settings_video_remote_cursor_show_radiobutton" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/connection_settings_video_remote_cursor_auto_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/connection_settings_video_remote_cursor_auto_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <RadioButton android:id="@id/connection_settings_video_remote_cursor_auto_radiobutton" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+        <LinearLayout android:id="@id/connection_settings_video_follow_remote_cursor_layout" style="@style/SettingsLineStyle">
+            <TextView android:id="@id/connection_settings_video_follow_remote_cursor_description" style="@style/SettingsDescriptionHorizontalStyle" />
+            <CheckBox android:id="@id/connection_settings_video_follow_remote_cursor_checkbox" style="@style/SettingsCheckboxStyle" />
+        </LinearLayout>
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+        <LinearLayout android:id="@id/connection_settings_video_follow_remote_focus_layout" style="@style/SettingsLineStyle">
+            <TextView android:id="@id/connection_settings_video_follow_remote_focus_description" style="@style/SettingsDescriptionHorizontalStyle" />
+            <CheckBox android:id="@id/connection_settings_video_follow_remote_focus_checkbox" style="@style/SettingsCheckboxStyle" />
+        </LinearLayout>
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+        <FrameLayout android:id="@id/connection_settings_video_privacy_mode_layout_container" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:id="@id/connection_settings_video_privacy_mode_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/connection_settings_video_privacy_mode_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/connection_settings_video_privacy_mode_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/connection_settings_video_privacy_mode_toast_overlay" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+    </LinearLayout>
+</ScrollView>

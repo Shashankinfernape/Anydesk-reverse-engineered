@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/account_login_scroll_view" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/account_login_container" android:background="@color/colorMainBackground" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/account_login_main" />
+        <com.google.android.material.divider.MaterialDivider android:id="@id/account_login_options_divider" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_horizontal_margin" android:layout_marginRight="@dimen/activity_horizontal_margin" android:layout_marginHorizontal="@dimen/activity_horizontal_margin" />
+        <include layout="@layout/account_login_options" />
+        <Button android:id="@id/account_login_private_btn" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" style="@style/AdTextButtonStyleBase" />
+    </LinearLayout>
+</ScrollView>

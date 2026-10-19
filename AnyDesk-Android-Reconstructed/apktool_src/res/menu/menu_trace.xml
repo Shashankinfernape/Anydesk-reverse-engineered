@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu android:id="@id/menu_trace"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@id/menu_trace_group_options" android:orderInCategory="100" android:checkableBehavior="all">
+        <item android:id="@id/menu_trace_filter_search" android:orderInCategory="100" android:checkable="true" app:showAsAction="never" />
+        <item android:id="@id/menu_trace_live_updates" android:orderInCategory="100" android:checkable="true" app:showAsAction="never" />
+        <item android:id="@id/menu_trace_auto_scroll" android:orderInCategory="100" android:checkable="true" app:showAsAction="never" />
+    </group>
+    <group android:id="@id/menu_trace_group_actions" android:orderInCategory="100" android:checkableBehavior="none">
+        <item android:id="@id/menu_trace_copy_to_clipboard" android:orderInCategory="100" app:showAsAction="never" />
+        <item android:id="@id/menu_trace_send_file" android:orderInCategory="100" app:showAsAction="never" />
+    </group>
+</menu>

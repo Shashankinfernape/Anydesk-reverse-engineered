@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/settings_access_scroll_view" android:background="@color/colorMainBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/settings_access_container" style="@style/SettingsGroupStyle">
+        <LinearLayout android:id="@id/settings_group_access_interactive" style="@style/SettingsGroupStyle">
+            <TextView android:id="@id/settings_access_title_interactive" style="@style/SettingsTitleStyle" />
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_access_interactive_layout" style="@style/SettingsRadioGroupStyle">
+                <LinearLayout android:id="@id/settings_access_interactive_allow_always_layout" style="@style/SettingsLineStyle">
+                    <TextView android:id="@id/settings_access_interactive_allow_always_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                    <RadioButton android:id="@id/settings_access_interactive_allow_always_radiobutton" style="@style/SettingsCheckboxStyle" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/settings_access_interactive_allow_running_layout" style="@style/SettingsLineStyle">
+                    <TextView android:id="@id/settings_access_interactive_allow_running_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                    <RadioButton android:id="@id/settings_access_interactive_allow_running_radiobutton" style="@style/SettingsCheckboxStyle" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/settings_access_interactive_allow_never_layout" style="@style/SettingsLineStyle">
+                    <TextView android:id="@id/settings_access_interactive_allow_never_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                    <RadioButton android:id="@id/settings_access_interactive_allow_never_radiobutton" style="@style/SettingsCheckboxStyle" />
+                </LinearLayout>
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/settings_group_access_unattended" style="@style/SettingsGroupStyle">
+            <TextView android:id="@id/settings_access_title_unattended" style="@style/SettingsTitleStyle" />
+            <TextView android:id="@id/settings_access_unattended_alert_override_passwd" style="@style/SettingsAlertStyle" />
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_access_unattended_allow_token_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_access_unattended_allow_token_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_access_unattended_allow_token_checkbox" android:nextFocusDown="@id/settings_access_unattended_clear_token_layout" android:nextFocusForward="@id/settings_access_unattended_clear_token_layout" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_access_unattended_clear_token_layout" android:background="?android:selectableItemBackground" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_access_unattended_clear_token" style="@style/SettingsDescriptionHorizontalStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_access_unattended_two_factor_auth_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_access_unattended_two_factor_auth_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_access_unattended_two_factor_auth_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_access_unattended_two_factor_auth_saved_login_layout" style="@style/SubSettingsLineStyle">
+                <TextView android:id="@id/settings_access_unattended_two_factor_auth_saved_login_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_access_unattended_two_factor_auth_saved_login_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_access_unattended_two_factor_auth_short_term_layout" style="@style/SubSettingsLineStyle">
+                <TextView android:id="@id/settings_access_unattended_two_factor_auth_short_term_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_access_unattended_two_factor_auth_short_term_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/settings_group_access_acl" style="@style/SettingsGroupStyle">
+            <TextView android:id="@id/settings_access_title_acl" style="@style/SettingsTitleStyle" />
+            <TextView android:id="@id/settings_access_hint_acl" style="@style/SettingsHintStyle" />
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_access_acl_enabled_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_access_acl_enabled_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_access_acl_enabled_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_access_acl_list_layout" style="@style/SettingsVerticalStyle">
+                <TextView android:id="@id/settings_access_acl_list_description" style="@style/SettingsDescriptionVerticalStyle" />
+                <TextView android:id="@id/settings_access_acl_list_value" style="@style/SettingsValueVerticalStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/settings_group_access_discovery" style="@style/SettingsGroupStyle">
+            <TextView android:id="@id/settings_access_title_discovery" style="@style/SettingsTitleStyle" />
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_access_discovery_enabled_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_access_discovery_enabled_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_access_discovery_enabled_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_access_discovery_hidden_layout" style="@style/SubSettingsLineStyle">
+                <TextView android:id="@id/settings_access_discovery_hidden_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_access_discovery_hidden_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/settings_group_access_auto_disconnect" style="@style/SettingsGroupStyle">
+            <TextView android:id="@id/settings_access_title_auto_disconnect" style="@style/SettingsTitleStyle" />
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_access_auto_disconnect_enabled_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_access_auto_disconnect_enabled_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_access_auto_disconnect_enabled_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_access_auto_disconnect_timeout_layout" style="@style/SettingsVerticalStyle">
+                <TextView android:id="@id/settings_access_auto_disconnect_timeout_description" style="@style/SettingsDescriptionVerticalStyle" />
+                <TextView android:id="@id/settings_access_auto_disconnect_timeout_value" style="@style/SettingsValueVerticalStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/settings_group_access_misc" style="@style/SettingsGroupStyle">
+            <TextView android:id="@id/settings_access_title_misc" style="@style/SettingsTitleStyle" />
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_access_misc_kickout_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_access_misc_kickout_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_access_misc_kickout_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_access_misc_setttings_protection_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_access_misc_settings_protection_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_access_misc_settings_protection_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu android:id="@id/menu_abook_roster_item"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/menu_abook_roster_item_install_shortcut" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/menu_abook_roster_item_connect" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/menu_abook_roster_item_browse_files" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/menu_abook_roster_item_vpn" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/menu_abook_roster_item_tcp_tunneling" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/menu_abook_roster_item_chat_history" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/menu_abook_roster_item_delete" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/menu_abook_roster_item_edit" android:orderInCategory="100" app:showAsAction="never" />
+</menu>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="48.0dip" android:width="48.0dip" android:viewportWidth="16.0" android:viewportHeight="16.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="#00000000" android:pathData="m5.25,4.25 l5.5,5.5m0,-5.5 l-5.5,5.5" android:strokeColor="#ffef443b" android:strokeWidth="1.0" android:strokeLineCap="square" android:fillType="evenOdd" />
+    <path android:fillColor="@drawable/$ic_dialog_connection_rejected__0" android:pathData="M10.5,14a0.5,0.5 0,0 1,0.09 0.992L10.5,15h-5a0.5,0.5 0,0 1,-0.09 -0.992L5.5,14h5ZM14.5,1A1.5,1.5 0,0 1,16 2.5v9a1.5,1.5 0,0 1,-1.5 1.5h-13A1.5,1.5 0,0 1,0 11.5v-9A1.5,1.5 0,0 1,1.5 1h13ZM14.5,2h-13a0.5,0.5 0,0 0,-0.5 0.5v9a0.5,0.5 0,0 0,0.5 0.5h13a0.5,0.5 0,0 0,0.5 -0.5v-9a0.5,0.5 0,0 0,-0.5 -0.5Z" android:fillType="evenOdd" />
+</vector>

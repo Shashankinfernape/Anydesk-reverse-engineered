@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/settings_recording_scroll_view" android:background="@color/colorMainBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/settings_recording_container" style="@style/SettingsGroupStyle">
+        <FrameLayout android:id="@id/settings_recording_incoming_layout_container" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:id="@id/settings_recording_incoming_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_recording_incoming_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_recording_incoming_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/settings_recording_incoming_toast_overlay" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+        <FrameLayout android:id="@id/settings_recording_outgoing_layout_container" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:id="@id/settings_recording_outgoing_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_recording_outgoing_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_recording_outgoing_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/settings_recording_outgoing_toast_overlay" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+    </LinearLayout>
+</ScrollView>

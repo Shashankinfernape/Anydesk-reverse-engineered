@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/account_error_background_corner_radius" />
+    <stroke android:width="@dimen/edittext_separator_size" android:color="@color/colorAddrTextBar" />
+    <padding android:left="@dimen/account_error_background_corner_radius" android:right="@dimen/account_error_background_corner_radius" />
+</shape>

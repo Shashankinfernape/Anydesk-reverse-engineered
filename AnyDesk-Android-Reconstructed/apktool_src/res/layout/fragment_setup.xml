@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/setup_scroll_view" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/setup_container" android:background="@color/colorMainBackground" style="@style/SettingsGroupStyle">
+        <LinearLayout android:id="@id/setup_preamble_layout" android:focusable="false" style="@style/SettingsLineStyle">
+            <TextView android:id="@id/setup_preamble" style="@style/SettingsDescriptionHorizontalStyle" />
+            <ImageView android:id="@id/setup_preamble_info_icon" android:background="@drawable/button_main_fragment" android:padding="@dimen/setup_status_padding" android:focusable="true" android:clickable="true" android:layout_width="@dimen/setup_preamble_icon_size" android:layout_height="@dimen/setup_preamble_icon_size" android:scaleType="fitCenter" android:layout_marginStart="@dimen/setup_status_padding" android:layout_marginEnd="@dimen/setup_status_padding" android:stateListAnimator="@animator/card_state_list_animator" app:srcCompat="@drawable/ic_perm_sysinfo" app:tint="@color/colorSettingsTextActionable" />
+        </LinearLayout>
+        <TextView android:id="@id/setup_general_title" style="@style/SettingsTitleStyle" />
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+        <com.anydesk.anydeskandroid.gui.element.SetupItem android:id="@id/setup_general_notifications_item" android:layout_width="fill_parent" android:layout_height="wrap_content" app:isCritical="false" />
+        <com.anydesk.anydeskandroid.gui.element.SetupItem android:id="@id/setup_general_notifications_channel_bg_item" android:layout_width="fill_parent" android:layout_height="wrap_content" app:isCritical="false" app:layoutIndentMultiplier="2" app:separatorIndentMultiplier="1" />
+        <com.anydesk.anydeskandroid.gui.element.SetupItem android:id="@id/setup_general_notifications_channel_hu_item" android:layout_width="fill_parent" android:layout_height="wrap_content" app:isCritical="false" app:layoutIndentMultiplier="2" app:separatorIndentMultiplier="1" />
+        <com.anydesk.anydeskandroid.gui.element.SetupItem android:id="@id/setup_general_notifications_channel_chat_item" android:layout_width="fill_parent" android:layout_height="wrap_content" app:isCritical="false" app:layoutIndentMultiplier="2" />
+        <com.anydesk.anydeskandroid.gui.element.SetupItem android:id="@id/setup_general_file_access_item" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.anydesk.anydeskandroid.gui.element.SetupItem android:id="@id/setup_general_local_network_item" android:layout_width="fill_parent" android:layout_height="wrap_content" app:isCritical="false" />
+        <com.anydesk.anydeskandroid.gui.element.SetupItem android:id="@id/setup_general_battery_item" android:layout_width="fill_parent" android:layout_height="wrap_content" app:isCritical="false" />
+        <LinearLayout android:id="@id/setup_incoming_wrapper" style="@style/SettingsGroupStyle">
+            <TextView android:id="@id/setup_incoming_title" style="@style/SettingsTitleStyle" />
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <com.anydesk.anydeskandroid.gui.element.SetupItem android:id="@id/setup_incoming_ad1_plugin_install_item" android:layout_width="fill_parent" android:layout_height="wrap_content" app:isStatusIcon="false" />
+            <com.anydesk.anydeskandroid.gui.element.SetupItem android:id="@id/setup_incoming_ad1_plugin_update_item" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:isStatusIcon="false" app:layoutIndentMultiplier="2" app:separatorIndentMultiplier="1" />
+            <com.anydesk.anydeskandroid.gui.element.SetupItem android:id="@id/setup_incoming_ad1_plugin_nonpersonal_profile_item" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:isCritical="false" app:isStatusIcon="true" app:layoutIndentMultiplier="2" app:separatorIndentMultiplier="1" app:setupStatusIconSrc="@drawable/ic_setup_profile" app:setupStatusIconWarningTint="@color/settings_value_vertical_color" />
+            <com.anydesk.anydeskandroid.gui.element.SetupItem android:id="@id/setup_incoming_ad1_plugin_battery_item" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:isCritical="false" app:layoutIndentMultiplier="2" />
+            <com.anydesk.anydeskandroid.gui.element.SetupItem android:id="@id/setup_incoming_manufacturer_plugin_install_item" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:isStatusIcon="false" />
+            <com.anydesk.anydeskandroid.gui.element.SetupItem android:id="@id/setup_incoming_manufacturer_plugin_update_item" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:isStatusIcon="false" app:layoutIndentMultiplier="2" app:separatorIndentMultiplier="1" />
+            <com.anydesk.anydeskandroid.gui.element.SetupItem android:id="@id/setup_incoming_manufacturer_plugin_battery_item" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:isCritical="false" app:layoutIndentMultiplier="2" />
+            <com.anydesk.anydeskandroid.gui.element.SetupItem android:id="@id/setup_incoming_overlay_item" android:layout_width="fill_parent" android:layout_height="wrap_content" app:isCritical="false" />
+            <com.anydesk.anydeskandroid.gui.element.SetupItem android:id="@id/setup_incoming_microphone_item" android:layout_width="fill_parent" android:layout_height="wrap_content" app:isCritical="false" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

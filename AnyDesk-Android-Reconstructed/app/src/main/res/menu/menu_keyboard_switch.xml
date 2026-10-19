@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu android:id="@id/menu_keyboard_switch"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_pie_keyboard" android:id="@id/dial_keyboard_restricted" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_pie_unrestricted_keyboard" android:id="@id/dial_keyboard_unrestricted" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_pie_special_keyboard" android:id="@id/dial_keyboard_special" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+</menu>

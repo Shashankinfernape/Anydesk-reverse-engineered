@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/filemanager_attrs_layout" android:background="@drawable/filemanager_card_button_drag_handling_background" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.anydesk.anydeskandroid.gui.element.TightTextView android:id="@id/filemanager_attrs_dir" app:layout_constrainedWidth="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/filemanager_attrs_badge" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/FileManagerCardButtonTextStyle" />
+    <TextView android:id="@id/filemanager_attrs_badge" android:visibility="gone" android:layout_marginStart="4.0sp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/filemanager_attrs_dir" app:layout_constraintTop_toTopOf="parent" style="@style/FileManagerCardBadgeStyle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

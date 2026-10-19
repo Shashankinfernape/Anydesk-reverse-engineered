@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="bottom|center" android:id="@id/keyboard_special_extended" android:background="@color/colorConnectionSpecialKeyboard" android:padding="@dimen/kbs_margin" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <GridLayout android:layout_gravity="center" android:id="@id/kbs_extended_button_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0.0dip" android:rowCount="5" android:columnCount="13" android:useDefaultMargins="false">
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_extended_button_menu" android:visibility="gone" app:srcCompat="@drawable/ic_key_menu" style="@style/SpecialKeyboardImageButton" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_extended_button_apps" android:visibility="gone" app:srcCompat="@drawable/ic_key_apps" style="@style/SpecialKeyboardImageButton" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_extended_button_home" android:visibility="gone" app:srcCompat="@drawable/ic_key_home" style="@style/SpecialKeyboardImageButton" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_extended_button_back" android:visibility="gone" app:srcCompat="@drawable/ic_key_back" style="@style/SpecialKeyboardImageButton" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_extended_button_volume_minus" android:visibility="gone" app:srcCompat="@drawable/ic_key_volume_minus" style="@style/SpecialKeyboardImageButton" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_extended_button_volume_plus" android:visibility="gone" app:srcCompat="@drawable/ic_key_volume_plus" style="@style/SpecialKeyboardImageButton" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_extended_button_power" android:visibility="gone" app:srcCompat="@drawable/ic_key_power" style="@style/SpecialKeyboardImageButton" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_ok" android:visibility="gone" android:text="OK" style="@style/SpecialKeyboardTextButton" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_escape" android:text="ESC" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_f1" android:text="F1" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_f2" android:text="F2" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_f3" android:text="F3" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_f4" android:text="F4" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_f5" android:text="F5" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_f6" android:text="F6" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_f7" android:text="F7" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_f8" android:text="F8" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_f9" android:text="F9" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_f10" android:text="F10" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_f11" android:text="F11" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_f12" android:text="F12" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_extended_button_tab" app:srcCompat="@drawable/ic_key_tab" style="@style/SpecialKeyboardImageButton" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_ins" android:text="ins" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_pos1" android:text="pos1" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_pg_up" android:text="pgUp" style="@style/SpecialKeyboardTextButton" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_extended_button_backspace" app:srcCompat="@drawable/ic_key_backspace" style="@style/SpecialKeyboardImageButton" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_sys" android:text="SYS" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatToggleButton android:id="@id/kbs_extended_button_caps_lock" android:background="@drawable/toggle_button_caps" style="@style/SpecialKeyboardImageToggleButton" />
+        <androidx.appcompat.widget.AppCompatToggleButton android:id="@id/kbs_extended_button_shift" android:background="@drawable/toggle_button_shift" style="@style/SpecialKeyboardImageToggleButton" />
+        <androidx.appcompat.widget.AppCompatToggleButton android:id="@id/kbs_extended_button_altgr" android:textOn="AltGr" android:textOff="AltGr" android:text="AltGr" style="@style/SpecialKeyboardTextToggleButton" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_del" android:text="del" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_end" android:text="end" style="@style/SpecialKeyboardTextButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_pg_down" android:text="pgDn" style="@style/SpecialKeyboardTextButton" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_extended_button_up" app:srcCompat="@drawable/ic_key_up" style="@style/SpecialKeyboardImageButton" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_extended_button_return" app:srcCompat="@drawable/ic_key_enter" style="@style/SpecialKeyboardImageButton" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatToggleButton android:id="@id/kbs_extended_button_roll" android:textOn="Roll" android:textOff="Roll" android:text="Roll" style="@style/SpecialKeyboardTextToggleButton" />
+        <androidx.appcompat.widget.AppCompatToggleButton android:id="@id/kbs_extended_button_ctrl" android:textOn="Ctrl" android:textOff="Ctrl" android:text="Ctrl" style="@style/SpecialKeyboardTextToggleButton" />
+        <androidx.appcompat.widget.AppCompatToggleButton android:id="@id/kbs_extended_button_win" android:background="@drawable/toggle_button_win" style="@style/SpecialKeyboardImageToggleButton" />
+        <androidx.appcompat.widget.AppCompatToggleButton android:id="@id/kbs_extended_button_alt" android:textOn="Alt" android:textOff="Alt" android:text="Alt" style="@style/SpecialKeyboardTextToggleButton" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_extended_button_left" app:srcCompat="@drawable/ic_key_left" style="@style/SpecialKeyboardImageButton" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_extended_button_down" app:srcCompat="@drawable/ic_key_down" style="@style/SpecialKeyboardImageButton" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/kbs_extended_button_right" app:srcCompat="@drawable/ic_key_right" style="@style/SpecialKeyboardImageButton" />
+        <Space android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatToggleButton android:id="@id/kbs_extended_button_num_lock" android:textOn="Num" android:textOff="Num" android:text="Num" style="@style/SpecialKeyboardTextToggleButton" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@id/kbs_extended_button_break" android:text="Brk" style="@style/SpecialKeyboardTextButton" />
+    </GridLayout>
+</FrameLayout>

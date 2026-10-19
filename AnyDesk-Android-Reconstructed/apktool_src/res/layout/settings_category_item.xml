@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/settings_category_item_layout" android:background="@drawable/settings_category_item_background" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:paddingStart="24.0dip" android:paddingEnd="?android:scrollbarSize"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/settings_category_image" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@color/colorSettingsCategoryText" android:layout_marginStart="0.0dip" android:layout_marginEnd="8.0dip" />
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/colorSettingsCategoryText" android:ellipsize="marquee" android:layout_gravity="center_vertical" android:id="@id/settings_category_title" android:focusable="false" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+</LinearLayout>

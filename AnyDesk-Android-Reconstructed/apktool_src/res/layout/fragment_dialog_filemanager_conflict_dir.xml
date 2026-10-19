@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/dialog_filemanager_conflict_dir_frame" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.anydesk.anydeskandroid.gui.element.ListenerScrollView android:id="@id/dialog_filemanager_conflict_dir_scroll_view" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fadeScrollbars="false">
+        <LinearLayout android:orientation="vertical" android:id="@id/dialog_filemanager_conflict_dir_content" android:padding="@dimen/dialog_padding" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/colorDialogText" android:id="@id/dialog_filemanager_conflict_dir_message" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" />
+            <LinearLayout android:layout_gravity="start" android:orientation="horizontal" android:id="@id/fragment_dialog_filemanager_conflict_dir_checkbox_layout" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <CheckBox android:id="@id/fragment_dialog_filemanager_conflict_dir_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textColor="@color/colorDialogText" android:id="@id/fragment_dialog_filemanager_conflict_dir_checkbox_description" android:background="@drawable/filemanager_card_item_horizontalscrollview_background" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.anydesk.anydeskandroid.gui.element.ListenerScrollView>
+    <ImageView android:layout_gravity="center|top" android:id="@id/dialog_filemanager_conflict_dir_scroll_hint_top" android:focusable="false" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_scroll_hint_top" />
+    <ImageView android:layout_gravity="bottom|center" android:id="@id/dialog_filemanager_conflict_dir_scroll_hint_bottom" android:focusable="false" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_scroll_hint_bottom" />
+</FrameLayout>

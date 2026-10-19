@@ -1,0 +1,122 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes.dex */
+public enum io {
+    /* JADX INFO: Fake field, exist only in values array */
+    KEY_PRIVACY_TRIGGER("ad.msg.data", 8),
+    /* JADX INFO: Fake field, exist only in values array */
+    KEY_CA_CERTS("ad.anynet.ca_certs", 9),
+    /* JADX INFO: Fake field, exist only in values array */
+    KEY_CERT("ad.anynet.cert", 9),
+    /* JADX INFO: Fake field, exist only in values array */
+    KEY_BOOT_ADDRS("ad.anynet.boot_addrs", 7),
+    /* JADX INFO: Fake field, exist only in values array */
+    KEY_LAST_RELAY("ad.anynet.last_relay", 7),
+    KEY_AUTOMATIC_KEYBOARD("ad.image.auto_keyboard", 8),
+    KEY_QUALITY("ad.image.quality_preset", 8),
+    KEY_QUALITY_LOSSLESS("ad.image.quality_lossless", 8),
+    KEY_SHOW_REMOTE_CURSOR_OPTION("ad.image.show_remote_cursor_option", 8),
+    KEY_FOLLOW_REMOTE_CURSOR("ad.image.follow_remote_cursor", 8),
+    KEY_FOLLOW_REMOTE_FOCUS("ad.image.follow_remote_focus", 8),
+    KEY_AUTO_HIDE_NUBSI("ad.ui.auto_hide_nubsi", 8),
+    KEY_LOCK_REMOTE_ACCOUNT("ad.security.sess.lock_remote_account", 8),
+    KEY_FRONTEND_CLIPBOARD("ad.security.frontend_clipboard", 7),
+    KEY_FRONTEND_CLIPBOARD_FILES("ad.security.frontend_clipboard_files", 7),
+    KEY_TOUCH_MODE("ad.input.touch_mode", 8),
+    KEY_REMEMBER_SETTINGS("ad.session.remember_settings", 8),
+    KEY_AUTOMATIC_TOUCH_TO_TOUCH_MODE("ad.input.auto_touch_to_touch_mode", 8),
+    KEY_INJECT_MOUSE_AS_TOUCH("ad.input.inject_mouse_as_touch", 8),
+    KEY_LOGIN_ENABLED("ad.security.login_enabled", 9),
+    KEY_INTERACTIVE_ACCESS("ad.security.interactive_access", 7),
+    KEY_SHOW_ID_INSTEAD_OF_ALIAS("ad.ui.alias_or_id", 8),
+    KEY_AUDIO_TRANSMIT_MODE("ad.audio.transmit_mode", 8),
+    KEY_AUDIO_PLAYBACK_MODE("ad.audio.playback_mode", 8),
+    KEY_RECORD_INCOMING("ad.recording.auto_start.incoming", 8),
+    KEY_RECORD_OUTGOING("ad.recording.auto_start.outgoing", 8),
+    KEY_SETTINGS_PROTECTION("ad.security.settings_protection", 7),
+    KEY_TWO_FACTOR_AUTH_FLAGS("ad.security.two_factor_auth_flags", 7),
+    KEY_FILES_ENABLE_PARENT_FOLDER("ad.files.enable_parent_folder", 8),
+    KEY_FEATURE_UNATTENDED("ad.features.unattended", 1),
+    KEY_FEATURE_ACCEPT("ad.features.accept", 1),
+    KEY_FEATURE_CONNECT("ad.features.connect", 1),
+    KEY_FEATURE_ADDRESS_BAR("ad.features.address_bar", 1),
+    KEY_FEATURE_TWO_FACTOR_AUTH("ad.features.two_factor_auth", 1),
+    KEY_FEATURE_ABOOK("ad.features.address_book", 1),
+    KEY_FEATURE_SESSION_PLAYBACK("ad.features.sess_playback", 1),
+    KEY_FEATURE_SESSION_RECORDING("ad.features.sess_record", 1),
+    KEY_FEATURE_VPN("ad.features.vpn", 1),
+    KEY_FEATURE_FILEMANAGER("ad.features.file_manager", 1),
+    KEY_FEATURE_DISCOVERY("ad.features.discovery", 1),
+    KEY_FEATURE_TCP_TUNNELING("ad.features.tcp_tun", 1),
+    KEY_FEATURE_TELEMETRY("ad.features.telemetry", 1),
+    KEY_FEATURE_USER_ACCOUNT("ad.features.user_account", 1),
+    KEY_FEATURE_HUB_LOCAL("ad.features.hub.local", 1),
+    KEY_CFG_ENABLED("ad.ui.cfg_enabled", 1),
+    KEY_CFG_ENABLE_ACCESS("ad.ui.cfg_enable_access", 1),
+    KEY_CFG_ENABLE_AUDIO("ad.ui.cfg_enable_audio", 1),
+    KEY_CFG_ENABLE_CONNECTION("ad.ui.cfg_enable_connection", 1),
+    KEY_CFG_ENABLE_IDENTITY("ad.ui.cfg_enable_identity", 1),
+    KEY_CFG_ENABLE_INPUT("ad.ui.cfg_enable_input", 1),
+    KEY_CFG_ENABLE_INTERFACE("ad.ui.cfg_enable_interface", 1),
+    KEY_CFG_ENABLE_PERMISSION_PROFILES("ad.ui.cfg_enable_permission_profiles", 1),
+    KEY_CFG_ENABLE_RECORDING("ad.ui.cfg_enable_recording", 1),
+    KEY_CFG_ENABLE_SECURITY("ad.ui.cfg_enable_security", 1),
+    KEY_CFG_ENABLE_VIDEO("ad.ui.cfg_enable_video", 1),
+    KEY_CFG_ENABLE_VPN("ad.ui.cfg_enable_vpn", 1),
+    KEY_ALIAS("ad.anynet.alias", 7),
+    KEY_LISTEN_PORT("ad.anynet.listen_port", 7),
+    KEY_ALLOW_DIRECT("ad.anynet.direct", 7),
+    KEY_ALLOW_TOKEN("ad.security.allow_logon_token", 7),
+    /* JADX INFO: Fake field, exist only in values array */
+    KEY_PRIVACY_TRIGGER("ad.license.name", 7),
+    /* JADX INFO: Fake field, exist only in values array */
+    KEY_LICENSE_PERMISSIONS("ad.license.permissions", 1),
+    /* JADX INFO: Fake field, exist only in values array */
+    KEY_PRIVACY_TRIGGER("ad.license.register_key", 7),
+    KEY_PROXY_MODE("ad.anynet.proxy.mode", 7),
+    KEY_PROXY_ADDR("ad.anynet.proxy.addr", 7),
+    KEY_PROXY_PORT("ad.anynet.proxy.port", 7),
+    KEY_PROXY_AUTH("ad.anynet.proxy.auth", 7),
+    KEY_PROXY_USER("ad.anynet.proxy.user", 7),
+    KEY_PROXY_PASS("ad.anynet.proxy.pass", 7),
+    KEY_BKGND_SHOW("ad.privacy.bkgnd.show", 8),
+    KEY_PERM_PROFILES_ENABLE_PREVIOUS_SESSION("ad.security.permission_profiles.enable_previous_session", 8),
+    KEY_PERM_PROFILES_CAN_CREATE("ad.security.permission_profiles.can_create", 1),
+    KEY_ACL_ENABLED("ad.security.acl_enabled", 7),
+    KEY_ACL_TRIGGER("ad.security.acl_trigger", 7),
+    KEY_ACL_LIST("ad.security.acl_list", 7),
+    KEY_DISCOVERY_ENABLED("ad.discovery.enabled", 7),
+    KEY_DISCOVERY_HIDDEN("ad.discovery.hidden", 7),
+    KEY_AUTO_DISCONNECT_MODE("ad.security.auto_disconnect.mode", 7),
+    KEY_AUTO_DISCONNECT_TIMEOUT("ad.security.auto_disconnect.timeout", 7),
+    KEY_KICKOUT("ad.security.kickout", 7),
+    /* JADX INFO: Fake field, exist only in values array */
+    KEY_PRIVACY_TRIGGER("ad.privacy.trigger", 8),
+    KEY_CHAT_PATH_CFG("ad.privacy.chat.path_cfg", 8),
+    KEY_ONLINE_STATUS_RECEIVE("ad.general.online_status.remote_client", 8),
+    KEY_VPN_AUTO_CONFIG("ad.vpn.auto_config", 8),
+    KEY_VPN_START_IP("ad.vpn.start_ip", 8),
+    KEY_VPN_DEFAULT_NETMASK("ad.vpn.default_netmask", 8),
+    KEY_PROMINENT_DISCLOSURE_QUERY_ALL_PACKAGES_CONSENT("ad.ui.dialog.consent_version.query_all_packages", 8),
+    KEY_UI_ENABLE_DIALOG_OVERLAY_PERMISSION("ad.ui.enable.dialog.overlay_permission", 8),
+    KEY_UI_ENABLE_DIALOG_LOCAL_SCAM_WARNING("ad.ui.enable.dialog.local_scam_warning", 8),
+    KEY_UI_ENABLE_TUTORIAL_AUTOSTART("ad.ui.enable.tutorial_autostart", 8),
+    KEY_UI_ENABLE_DIALOG_QUERY_ALL_PACKAGES_CONSENT("ad.ui.enable.dialog.query_all_packages_consent", 8),
+    KEY_UI_ENABLE_DIALOG_PRIVACY_POLICY("ad.ui.enable.dialog.privacy_policy", 8),
+    KEY_UI_ENABLE_DIALOG_UNATTENDED_ACCESS_INFO("ad.ui.enable.dialog.unattended_access_info", 8),
+    KEY_UI_ENABLE_DIALOG_SETUP_PROMPT("ad.ui.enable.dialog.setup_prompt", 8),
+    KEY_UI_ENABLE_DIALOG_LANGUAGE_CHANGED("ad.ui.enable.dialog.language_changed", 8),
+    KEY_UI_NOTIFICATION_SOUND_INCOMING_CONN_REQUEST("ad.ui.notification_sound.incoming_conn_request", 8),
+    KEY_UI_NOTIFICATION_SOUND_SESS_CREATE("ad.ui.notification_sound.sess_create", 8),
+    KEY_UI_NOTIFICATION_SOUND_SESS_CLOSE("ad.ui.notification_sound.sess_close", 8),
+    KEY_UI_SHOW_AD1_CHECK("ad.ui.show_ad1_check", 8),
+    KEY_UI_SHOW_TILE_TELEMETRY("ad.ui.show_tile.telemetry", 8);
+
+    public final String c;
+    public final int d;
+
+    io(String str, int i) {
+        this.c = str;
+        this.d = i;
+    }
+}

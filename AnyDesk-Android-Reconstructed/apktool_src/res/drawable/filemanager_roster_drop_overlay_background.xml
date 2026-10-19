@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/filemanager_roster_drop_overlay_background_color" />
+        </shape>
+    </item>
+    <item android:left="16.0dip" android:top="16.0dip" android:right="16.0dip" android:bottom="16.0dip">
+        <shape android:shape="rectangle">
+            <stroke android:width="4.0dip" android:color="@color/filemanager_roster_drop_overlay_text_color" android:dashWidth="10.0dip" android:dashGap="10.0dip" />
+            <corners android:radius="@dimen/filemanager_roster_drop_overlay_corner_radius" />
+            <padding android:left="36.0dip" android:top="36.0dip" android:right="36.0dip" android:bottom="36.0dip" />
+        </shape>
+    </item>
+</layer-list>

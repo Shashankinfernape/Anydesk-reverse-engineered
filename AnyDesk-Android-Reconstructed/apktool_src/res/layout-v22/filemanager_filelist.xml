@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/filemanager_permission_text_container" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/filemanager_filelist_wrapper" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/filemanager_selectallfiles_checkbox_container" android:focusable="false" android:layout_width="fill_parent" android:layout_height="@dimen/filemanager_dirpath_height" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip">
+            <FrameLayout android:id="@id/filemanager_searchbar_container" android:focusable="false" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <LinearLayout android:orientation="horizontal" android:id="@id/filemanager_dirpath_container" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:id="@id/filemanager_home" app:srcCompat="@drawable/ic_filemanager_home" style="@style/AdImageButtonStyleCardFileManagerDirPath" />
+                    <androidx.recyclerview.widget.RecyclerView android:orientation="horizontal" android:id="@id/filemanager_dirpath" android:focusable="false" android:descendantFocusability="afterDescendants" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="@dimen/filemanager_item_subpadding_left" />
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/filemanager_clear_shares_btn" android:visibility="gone" app:srcCompat="@drawable/ic_key_close" style="@style/AdImageButtonStyleCardMainFragment" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/filemanager_searchbar" android:focusable="false" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:id="@id/filemanager_searchbar_hide_button" android:tint="@color/colorAddrBoxIconTint" app:srcCompat="@drawable/ic_key_close" style="@style/AdImageButtonStyleCardFileManagerSearchHide" />
+                    <com.anydesk.anydeskandroid.gui.element.AdEditText android:id="@id/filemanager_ad_edit_text" android:layout_width="fill_parent" android:layout_height="fill_parent" app:isSeparatorVisible="false" app:textColor="@color/colorFileManagerSearchText" app:textSize="@dimen/filemanager_searchbar_font_size" />
+                </LinearLayout>
+            </FrameLayout>
+            <CheckBox android:theme="@style/FileManagerCheckboxStyle" android:enabled="false" android:layout_gravity="center" android:id="@id/filemanager_selectallfiles_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <View android:id="@id/filemanager_selectallfiles_checkbox_padding_right" android:focusable="false" android:visibility="gone" android:clickable="false" android:layout_width="24.0dip" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View android:id="@id/filemanager_searchbar_separator" android:background="@color/colorFileManagerSeparator" android:focusable="false" android:visibility="invisible" android:clickable="false" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        <FrameLayout android:id="@id/filemanager_roster_container" android:focusable="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/filemanager_roster" android:focusable="false" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/filemanager_roster_item_primary_text_size" android:textStyle="italic" android:textColor="@color/colorFileManagerCardText" android:gravity="center" android:id="@id/filemanager_result_text" android:focusable="false" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:textAlignment="gravity" android:layout_marginHorizontal="20.0dip" />
+            <TextView android:textSize="@dimen/filemanager_roster_drop_overlay_text_size" android:textStyle="bold" android:textColor="@color/filemanager_roster_drop_overlay_text_color" android:gravity="center" android:id="@id/filemanager_roster_drop_overlay" android:background="@drawable/filemanager_roster_drop_overlay_background" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textAlignment="gravity" />
+        </FrameLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/filemanager_roster_item_primary_text_size" android:textStyle="italic" android:textColor="@color/colorFileManagerCardText" android:gravity="center" android:id="@id/filemanager_permission_text" android:focusable="false" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:textAlignment="gravity" android:layout_marginHorizontal="20.0dip" />
+</FrameLayout>

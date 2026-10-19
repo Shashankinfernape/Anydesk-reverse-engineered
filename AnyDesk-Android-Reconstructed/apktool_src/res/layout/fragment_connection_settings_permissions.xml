@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/connection_settings_permissions_scroll_view" android:background="@color/colorMainBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/connection_settings_permissions_container" style="@style/SettingsGroupStyle">
+        <LinearLayout android:id="@id/connection_settings_permissions_synchronize_clipboard_layout" style="@style/SettingsLineStyle">
+            <TextView android:id="@id/connection_settings_permissions_synchronize_clipboard_description" style="@style/SettingsDescriptionHorizontalStyle" />
+            <CheckBox android:id="@id/connection_settings_permissions_synchronize_clipboard_checkbox" style="@style/SettingsCheckboxStyle" />
+        </LinearLayout>
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+        <LinearLayout android:id="@id/connection_settings_permissions_synchronize_clipboard_files_layout" style="@style/SubSettingsLineStyle">
+            <TextView android:id="@id/connection_settings_permissions_synchronize_clipboard_files_description" style="@style/SettingsDescriptionHorizontalStyle" />
+            <CheckBox android:id="@id/connection_settings_permissions_synchronize_clipboard_files_checkbox" style="@style/SettingsCheckboxStyle" />
+        </LinearLayout>
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+        <LinearLayout android:id="@id/connection_settings_permissions_lock_account_layout" style="@style/SettingsLineStyle">
+            <TextView android:id="@id/connection_settings_permissions_lock_account_description" style="@style/SettingsDescriptionHorizontalStyle" />
+            <CheckBox android:id="@id/connection_settings_permissions_lock_account_checkbox" style="@style/SettingsCheckboxStyle" />
+        </LinearLayout>
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+    </LinearLayout>
+</ScrollView>

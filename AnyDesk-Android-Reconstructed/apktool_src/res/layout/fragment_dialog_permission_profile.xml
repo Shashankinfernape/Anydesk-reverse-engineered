@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/dialog_permission_profile_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/settings_security_pp_container" style="@style/SettingsGroupStyle">
+        <TextView android:id="@id/settings_security_pp_main_title" android:layout_marginBottom="16.0dip" style="@style/SettingsTitleStyle" />
+        <FrameLayout style="@style/DialogDividerStyle" />
+        <LinearLayout android:id="@id/settings_security_pp_enabled_layout" style="@style/SettingsLineStyle">
+            <TextView android:id="@id/settings_security_pp_enabled_descriiption" style="@style/SettingsDescriptionHorizontalStyle" />
+            <CheckBox android:id="@id/settings_security_pp_enabled_checkbox" style="@style/SettingsCheckboxStyle" />
+        </LinearLayout>
+        <FrameLayout style="@style/DialogDividerStyle" />
+        <LinearLayout android:id="@id/settings_group_security_pp_unattended_access" style="@style/SettingsGroupStyle">
+            <LinearLayout android:id="@id/settings_security_pp_unattended_access_active_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_security_pp_unattended_access_active_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_security_pp_unattended_access_active_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/DialogDividerStyle" />
+            <LinearLayout android:id="@id/settings_security_pp_unattended_access_passwd_layout" android:background="?android:selectableItemBackground" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_security_pp_unattended_access_passwd" style="@style/SubSettingsDescriptionHorizontalStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/DialogDividerStyle" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/settings_group_security_pp_permissions" style="@style/SettingsGroupStyle">
+            <TextView android:id="@id/settings_security_pp_permissions_title" style="@style/SettingsTitleStyle" />
+            <TextView android:id="@id/settings_security_pp_permissions_hint" style="@style/SettingsHintStyle" />
+            <FrameLayout style="@style/DialogDividerStyle" />
+            <LinearLayout android:id="@id/settings_security_pp_permissions_audio_layout" style="@style/SettingsLineStyle">
+                <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/settings_security_pp_permissions_audio_icon" app:src="@drawable/ic_perm_audio" style="@style/SettingsIconHorizontalStyle" />
+                <TextView android:id="@id/settings_security_pp_permissions_audio_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                <CheckBox android:id="@id/settings_security_pp_permissions_audio_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/DialogDividerStyle" />
+            <LinearLayout android:id="@id/settings_security_pp_permissions_ctrl_layout" style="@style/SettingsLineStyle">
+                <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/settings_security_pp_permissions_ctrl_icon" app:src="@drawable/ic_perm_input" style="@style/SettingsIconHorizontalStyle" />
+                <TextView android:id="@id/settings_security_pp_permissions_ctrl_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                <CheckBox android:id="@id/settings_security_pp_permissions_ctrl_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/DialogDividerStyle" />
+            <LinearLayout android:id="@id/settings_security_pp_permissions_show_pointer_layout" style="@style/SettingsLineStyle">
+                <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/settings_security_pp_permissions_show_pointer_icon" app:src="@drawable/ic_perm_user_pointer" style="@style/SettingsIconHorizontalStyle" />
+                <TextView android:id="@id/settings_security_pp_permissions_show_pointer_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                <CheckBox android:id="@id/settings_security_pp_permissions_show_pointer_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/DialogDividerStyle" />
+            <LinearLayout android:id="@id/settings_security_pp_permissions_clipbrd_layout" style="@style/SettingsLineStyle">
+                <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/settings_security_pp_permissions_clipbrd_icon" app:src="@drawable/ic_perm_clipboard" style="@style/SettingsIconHorizontalStyle" />
+                <TextView android:id="@id/settings_security_pp_permissions_clipbrd_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                <CheckBox android:id="@id/settings_security_pp_permissions_clipbrd_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/DialogDividerStyle" />
+            <LinearLayout android:id="@id/settings_security_pp_permissions_clipbrd_files_layout" style="@style/SubSettingsLineStyle">
+                <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/settings_security_pp_permissions_clipbrd_files_icon" app:src="@drawable/ic_perm_clipboard_files" style="@style/SettingsIconHorizontalStyle" />
+                <TextView android:id="@id/settings_security_pp_permissions_clipbrd_files_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                <CheckBox android:id="@id/settings_security_pp_permissions_clipbrd_files_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/DialogDividerStyle" />
+            <LinearLayout android:id="@id/settings_security_pp_permissions_file_manager_layout" style="@style/SettingsLineStyle">
+                <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/settings_security_pp_permissions_file_manager_icon" app:src="@drawable/ic_perm_file_manager" style="@style/SettingsIconHorizontalStyle" />
+                <TextView android:id="@id/settings_security_pp_permissions_file_manager_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                <CheckBox android:id="@id/settings_security_pp_permissions_file_manager_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/DialogDividerStyle" />
+            <LinearLayout android:id="@id/settings_security_pp_permissions_sysinfo_layout" style="@style/SettingsLineStyle">
+                <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/settings_security_pp_permissions_sysinfo_icon" app:src="@drawable/ic_perm_sysinfo" style="@style/SettingsIconHorizontalStyle" />
+                <TextView android:id="@id/settings_security_pp_permissions_sysinfo_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                <CheckBox android:id="@id/settings_security_pp_permissions_sysinfo_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/DialogDividerStyle" />
+            <LinearLayout android:id="@id/settings_security_pp_permissions_tcp_tunnel_layout" style="@style/SettingsLineStyle">
+                <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/settings_security_pp_permissions_tcp_tunnel_icon" app:src="@drawable/ic_perm_tcp_tunnel" style="@style/SettingsIconHorizontalStyle" />
+                <TextView android:id="@id/settings_security_pp_permissions_tcp_tunnel_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                <CheckBox android:id="@id/settings_security_pp_permissions_tcp_tunnel_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/DialogDividerStyle" />
+            <LinearLayout android:id="@id/settings_security_pp_permissions_vpn_layout" style="@style/SettingsLineStyle">
+                <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/settings_security_pp_permissions_vpn_icon" app:src="@drawable/ic_perm_vpn" style="@style/SettingsIconHorizontalStyle" />
+                <TextView android:id="@id/settings_security_pp_permissions_vpn_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                <CheckBox android:id="@id/settings_security_pp_permissions_vpn_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/DialogDividerStyle" />
+            <LinearLayout android:id="@id/settings_security_pp_permissions_record_layout" style="@style/SettingsLineStyle">
+                <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/settings_security_pp_permissions_record_icon" app:src="@drawable/ic_perm_record_session" style="@style/SettingsIconHorizontalStyle" />
+                <TextView android:id="@id/settings_security_pp_permissions_record_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                <CheckBox android:id="@id/settings_security_pp_permissions_record_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/DialogDividerStyle" />
+            <LinearLayout android:id="@id/settings_security_pp_permissions_modify_forbidden_windows_layout" style="@style/SettingsLineStyle">
+                <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/settings_security_pp_permissions_modify_forbidden_windows_icon" app:src="@drawable/ic_perm_modify_forbidden_windows" style="@style/SettingsIconHorizontalStyle" />
+                <TextView android:id="@id/settings_security_pp_permissions_modify_forbidden_windows_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                <CheckBox android:id="@id/settings_security_pp_permissions_modify_forbidden_windows_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/DialogDividerStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

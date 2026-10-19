@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/tcp_tunnel_fragment_layout" android:background="@color/colorMainBackground" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/tcp_tunnel_scroll_view" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/tcp_tunnel_content" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip">
+            <TextView android:textSize="@dimen/status_text_font_size" android:textColor="@color/colorSettingsCategoryText" android:id="@id/tcp_tunnel_forward_title" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TableLayout android:orientation="vertical" android:id="@id/tcp_tunnel_forward_table" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:stretchColumns="0,2,3" android:shrinkColumns="1,4">
+                <TableRow android:id="@id/tcp_tunnel_forward_title_row">
+                    <TextView android:id="@id/tcp_tunnel_forward_local_port_title" android:layout_column="0" android:layout_weight="@dimen/tcp_tunnel_port_title_weight" style="@style/TcpTunnelTitleStyle" />
+                    <TextView android:id="@id/tcp_tunnel_forward_remote_host_title" android:layout_column="2" android:layout_weight="@dimen/tcp_tunnel_host_weight" style="@style/TcpTunnelTitleStyle" />
+                    <TextView android:id="@id/tcp_tunnel_forward_remote_port_title" android:layout_column="3" android:layout_weight="@dimen/tcp_tunnel_port_title_weight" style="@style/TcpTunnelTitleStyle" />
+                </TableRow>
+            </TableLayout>
+            <Button android:layout_gravity="end" android:id="@id/tcp_tunnel_forward_add_button" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AdTextButtonStyleBase" />
+            <TextView android:textSize="@dimen/status_text_font_size" android:textColor="@color/colorSettingsCategoryText" android:id="@id/tcp_tunnel_reverse_title" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+            <TableLayout android:orientation="vertical" android:id="@id/tcp_tunnel_reverse_table" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:stretchColumns="0,1,3" android:shrinkColumns="2,4">
+                <TableRow android:id="@id/tcp_tunnel_reverse_title_row">
+                    <TextView android:id="@id/tcp_tunnel_reverse_local_host_title" android:layout_column="0" android:layout_weight="@dimen/tcp_tunnel_host_weight" style="@style/TcpTunnelTitleStyle" />
+                    <TextView android:id="@id/tcp_tunnel_reverse_local_port_title" android:layout_column="1" android:layout_weight="@dimen/tcp_tunnel_port_title_weight" style="@style/TcpTunnelTitleStyle" />
+                    <TextView android:id="@id/tcp_tunnel_reverse_remote_port_title" android:layout_column="3" android:layout_weight="@dimen/tcp_tunnel_port_title_weight" style="@style/TcpTunnelTitleStyle" />
+                </TableRow>
+            </TableLayout>
+            <Button android:layout_gravity="end" android:id="@id/tcp_tunnel_reverse_add_button" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AdTextButtonStyleBase" />
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="end" android:orientation="horizontal" android:id="@id/tcp_tunnel_button_layout" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="64.0dip">
+                <Button android:id="@id/tcp_tunnel_cancel_button" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:minWidth="0.0dip" android:layout_weight="1.0" style="@style/AdTextButtonStyleBase" />
+                <Button android:id="@id/tcp_tunnel_save_button" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:minWidth="0.0dip" style="@style/AdTextButtonStyleBase" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/tcp_tunnel_error_layout" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textStyle="bold" android:id="@id/tcp_tunnel_empty_ports_error" android:background="@color/colorTcpTunnelErrorLight" android:padding="6.0dip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewEnd" />
+        <TextView android:textStyle="bold" android:id="@id/tcp_tunnel_duplicate_ports_error" android:background="@color/colorTcpTunnelError" android:padding="6.0dip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewEnd" />
+    </LinearLayout>
+</RelativeLayout>

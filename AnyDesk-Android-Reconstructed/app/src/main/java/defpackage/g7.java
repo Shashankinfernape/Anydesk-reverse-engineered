@@ -1,0 +1,6 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes.dex */
+public interface g7 {
+    void i(d80 d80Var);
+}

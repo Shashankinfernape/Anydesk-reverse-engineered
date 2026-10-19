@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/account_login_options_layout" android:paddingTop="@dimen/activity_vertical_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/activity_horizontal_margin" android:paddingEnd="@dimen/activity_horizontal_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/account_login_not_user_yet_text" android:focusable="false" style="@style/AccountTextStyleBase" />
+    <Button android:id="@id/account_login_register_btn" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:layout_marginVertical="16.0dip" style="@style/AdTextButtonStyleBase" />
+    <Button android:id="@id/account_login_sso_btn" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AdTextButtonStyleBase" />
+</LinearLayout>

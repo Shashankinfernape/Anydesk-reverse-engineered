@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu android:id="@id/menu_filemanager_overflow"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_filemanager_select" android:id="@id/menu_filemanager_roster_item_select" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_filemanager_rename" android:id="@id/menu_filemanager_roster_item_rename" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_filemanager_delete" android:id="@id/menu_filemanager_roster_item_delete" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_filemanager_properties" android:id="@id/menu_filemanager_roster_item_properties" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+</menu>

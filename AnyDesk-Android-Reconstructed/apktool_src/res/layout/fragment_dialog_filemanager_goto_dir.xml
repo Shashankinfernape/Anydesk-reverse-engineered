@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/dialog_filemanager_goto_dir_scroll_view_container" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.anydesk.anydeskandroid.gui.element.ListenerScrollView android:id="@id/dialog_filemanager_goto_dir_scroll_view" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fadeScrollbars="false">
+        <LinearLayout android:id="@id/dialog_filemanager_goto_dir_radio_group" android:padding="@dimen/dialog_padding" style="@style/SettingsGroupStyle">
+            <RadioButton android:textColor="@color/colorDialogText" android:id="@id/dialog_filemanager_goto_dir_radio_button_manual_input" style="@style/FileManagerRadioButtonStyle" />
+            <com.anydesk.anydeskandroid.gui.element.AdEditText android:id="@id/dialog_filemanager_goto_dir_manual_input" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dialog_input_margin_top" app:textColor="@color/colorDialogText" app:textSize="@dimen/dialog_input_font_size" />
+            <RadioButton android:textColor="@color/colorDialogText" android:id="@id/dialog_filemanager_goto_dir_radio_button_recents" style="@style/FileManagerRadioButtonStyle" />
+            <Spinner android:id="@id/dialog_filemanager_goto_dir_recents_spinner" android:visibility="gone" android:layout_width="fill_parent" style="@style/SettingsCheckboxStyle" />
+        </LinearLayout>
+    </com.anydesk.anydeskandroid.gui.element.ListenerScrollView>
+    <ImageView android:layout_gravity="center|top" android:id="@id/dialog_filemanager_goto_dir_scroll_hint_top" android:focusable="false" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_scroll_hint_top" />
+    <ImageView android:layout_gravity="bottom|center" android:id="@id/dialog_filemanager_goto_dir_scroll_hint_bottom" android:focusable="false" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_scroll_hint_bottom" />
+</FrameLayout>

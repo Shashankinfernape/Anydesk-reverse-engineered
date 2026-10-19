@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.anydesk.anydeskandroid.gui.element.AdNestedScrollView android:id="@id/main_fragment_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/main_fragment_container" android:background="@color/colorMainBackground" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/card_layout" />
+        <include layout="@layout/speed_dial_button_layout" />
+        <FrameLayout android:id="@id/main_fragment_speed_dial_frame" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/speed_dial_container" android:focusable="false" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/speed_dial" android:clipChildren="false" android:clipToPadding="false" android:descendantFocusability="afterDescendants" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</com.anydesk.anydeskandroid.gui.element.AdNestedScrollView>

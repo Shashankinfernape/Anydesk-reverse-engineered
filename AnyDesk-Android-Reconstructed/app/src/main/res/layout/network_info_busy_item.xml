@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center_vertical" android:id="@id/network_info_busy_item_progress" android:focusable="false" android:layout_width="14.0sp" android:layout_height="14.0sp" android:layout_marginRight="4.0dip" />
+    <TextView android:textSize="@dimen/network_info_text_size" android:textColor="@color/colorDialogText" android:layout_gravity="center_vertical" android:id="@id/network_info_busy_item_name" android:focusable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <TextView android:textSize="@dimen/network_info_text_size" android:textColor="@color/colorDialogText" android:layout_gravity="center_vertical" android:id="@id/network_info_busy_item_result" android:focusable="false" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+</LinearLayout>

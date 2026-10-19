@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu android:id="@id/menu_addr_actions"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/context_addr_action_browse_files" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/context_addr_action_vpn" android:orderInCategory="100" app:showAsAction="never" />
+</menu>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/session_info_perms" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/session_info_body_margin" android:layout_marginRight="@dimen/session_info_body_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/session_info_block" />
+    <com.anydesk.anydeskandroid.gui.element.SessionInfoIconItem android:id="@id/session_info_perm_audio" app:src="@drawable/ic_perm_audio" style="@style/SessionInfoIconItemStyle" />
+    <com.anydesk.anydeskandroid.gui.element.SessionInfoIconItem android:id="@id/session_info_perm_input" app:src="@drawable/ic_perm_input" style="@style/SessionInfoIconItemStyle" />
+    <com.anydesk.anydeskandroid.gui.element.SessionInfoIconItem android:id="@id/session_info_perm_mouse_pointer" app:src="@drawable/ic_perm_user_pointer" style="@style/SessionInfoIconItemStyle" />
+    <com.anydesk.anydeskandroid.gui.element.SessionInfoIconItem android:id="@id/session_info_perm_clipboard" app:src="@drawable/ic_perm_clipboard" style="@style/SessionInfoIconItemStyle" />
+    <com.anydesk.anydeskandroid.gui.element.SessionInfoIconItem android:id="@id/session_info_perm_clipboard_files" app:src="@drawable/ic_perm_clipboard_files" style="@style/SessionInfoIconItemStyle" />
+    <com.anydesk.anydeskandroid.gui.element.SessionInfoIconItem android:id="@id/session_info_perm_file_manager" app:src="@drawable/ic_perm_file_manager" style="@style/SessionInfoIconItemStyle" />
+    <com.anydesk.anydeskandroid.gui.element.SessionInfoIconItem android:id="@id/session_info_perm_sysinfo" app:src="@drawable/ic_perm_sysinfo" style="@style/SessionInfoIconItemStyle" />
+    <com.anydesk.anydeskandroid.gui.element.SessionInfoIconItem android:id="@id/session_info_perm_tcp_tunnel" app:src="@drawable/ic_perm_tcp_tunnel" style="@style/SessionInfoIconItemStyle" />
+    <com.anydesk.anydeskandroid.gui.element.SessionInfoIconItem android:id="@id/session_info_perm_vpn" app:src="@drawable/ic_perm_vpn" style="@style/SessionInfoIconItemStyle" />
+    <com.anydesk.anydeskandroid.gui.element.SessionInfoIconItem android:id="@id/session_info_perm_record_session" app:src="@drawable/ic_perm_record_session" style="@style/SessionInfoIconItemStyle" />
+    <com.anydesk.anydeskandroid.gui.element.SessionInfoIconItem android:id="@id/session_info_perm_lock_account" app:src="@drawable/ic_perm_profile_lock" style="@style/SessionInfoIconItemStyle" />
+    <com.anydesk.anydeskandroid.gui.element.SessionInfoIconItem android:id="@id/session_info_perm_privacy" app:src="@drawable/ic_pie_privacy" style="@style/SessionInfoIconItemStyle" />
+    <com.anydesk.anydeskandroid.gui.element.SessionInfoIconItem android:id="@id/session_info_perm_modify_forbidden_windows" app:src="@drawable/ic_perm_modify_forbidden_windows" style="@style/SessionInfoIconItemStyle" />
+</LinearLayout>

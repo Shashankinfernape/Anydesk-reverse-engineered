@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/checkbox_dialog_frame" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.anydesk.anydeskandroid.gui.element.ListenerScrollView android:id="@id/checkbox_dialog_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fadeScrollbars="false">
+        <LinearLayout android:orientation="vertical" android:id="@id/checkbox_dialog_container_wrapper" android:padding="@dimen/dialog_padding" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/checkbox_dialog_message_one" android:visibility="gone" style="@style/BatteryOptimizationContainerStyle" />
+            <LinearLayout android:id="@id/checkbox_dialog_icon_one_container" android:visibility="gone" style="@style/BatteryOptimizationContainerStyle">
+                <ImageView android:id="@id/checkbox_dialog_icon_one_icon" android:layout_width="@dimen/dialog_body_icon_size" android:layout_height="@dimen/dialog_body_icon_size" android:layout_marginEnd="@dimen/dialog_body_icon_margin_end" app:srcCompat="@drawable/ic_battery_optimization_fixed" />
+                <TextView android:textColor="@color/colorDialogText" android:id="@id/checkbox_dialog_icon_one_description" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/checkbox_dialog_icon_two_container" android:visibility="gone" style="@style/BatteryOptimizationContainerStyle">
+                <ImageView android:id="@id/checkbox_dialog_icon_two_icon" android:layout_width="@dimen/dialog_body_icon_size" android:layout_height="@dimen/dialog_body_icon_size" android:layout_marginEnd="@dimen/dialog_body_icon_margin_end" app:srcCompat="@drawable/ic_battery_optimization_fixed" />
+                <TextView android:textColor="@color/colorDialogText" android:id="@id/checkbox_dialog_icon_two_description" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView android:id="@id/checkbox_dialog_link_one" android:background="@drawable/focusable_text_background" android:visibility="gone" style="@style/BatteryOptimizationContainerStyle" />
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="start|center" android:orientation="horizontal" android:id="@id/checkbox_dialog_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_checkbox_margin_top">
+                <CheckBox android:id="@id/checkbox_dialog_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textColor="@color/colorDialogText" android:id="@id/checkbox_dialog_checkbox_description" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.anydesk.anydeskandroid.gui.element.ListenerScrollView>
+    <ImageView android:layout_gravity="center|top" android:id="@id/checkbox_dialog_scroll_hint_top" android:focusable="false" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_scroll_hint_top" />
+    <ImageView android:layout_gravity="bottom|center" android:id="@id/checkbox_dialog_scroll_hint_bottom" android:focusable="false" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_scroll_hint_bottom" />
+</FrameLayout>

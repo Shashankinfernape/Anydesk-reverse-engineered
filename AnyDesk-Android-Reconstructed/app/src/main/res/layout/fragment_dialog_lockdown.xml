@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/dialog_lockdown_layout" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:fadeScrollbars="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/dialog_lockdown_container" android:padding="@dimen/dialog_padding" style="@style/SettingsGroupStyle">
+        <TextView android:textSize="@dimen/status_text_font_size" android:textColor="@color/colorDialogText" android:id="@id/dialog_lockdown_message" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" />
+        <include layout="@layout/dialog_status_message" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/filemanager_layout" android:background="@color/colorMainBackground" android:focusable="false" android:clickable="false" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/filemanager_app_bar_layout" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/filemanager_layout_2" android:focusable="false" android:visibility="invisible" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+        <fragment android:id="@id/filemanager_filelist" android:focusable="false" android:descendantFocusability="afterDescendants" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" app:isLocal="true" class="com.anydesk.anydeskandroid.gui.fragment.FileManagerFileListFragment" />
+        <FrameLayout android:id="@id/filemanager_filelists_separator" style="@style/FileManagerDividerStyle" />
+        <fragment android:id="@id/filemanager_filelist_2" android:focusable="false" android:descendantFocusability="afterDescendants" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" app:isLocal="false" class="com.anydesk.anydeskandroid.gui.fragment.FileManagerFileListFragment" />
+        <FrameLayout android:id="@id/filemanager_progresslist_separator" style="@style/FileManagerDividerStyle" />
+        <fragment android:id="@id/filemanager_progresslist" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" app:doShowTitleCard="true" class="com.anydesk.anydeskandroid.gui.fragment.FileManagerProgressListFragment" />
+    </LinearLayout>
+</LinearLayout>

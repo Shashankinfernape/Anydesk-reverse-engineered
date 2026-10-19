@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/dialog_terminal_frame" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.anydesk.anydeskandroid.gui.element.ListenerScrollView android:id="@id/dialog_terminal_scroll_view" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fadeScrollbars="false">
+        <LinearLayout android:orientation="vertical" android:id="@id/dialog_terminal_layout" android:padding="@dimen/dialog_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/colorDialogText" android:id="@id/dialog_terminal_error_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_input_margin_top" android:textIsSelectable="true" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/colorDialogText" android:id="@id/dialog_terminal_user_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_input_margin_top" android:textIsSelectable="true" />
+            <RadioGroup android:orientation="vertical" android:id="@id/dialog_terminal_radio_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_input_margin_top">
+                <RadioButton android:id="@id/dialog_terminal_radio_button_console" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <RadioButton android:id="@id/dialog_terminal_radio_button_user" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </RadioGroup>
+            <Spinner android:id="@id/dialog_terminal_spinner_known_users" android:visibility="gone" android:layout_width="fill_parent" style="@style/SettingsCheckboxStyle" />
+            <com.anydesk.anydeskandroid.gui.element.AdEditText android:id="@id/dialog_terminal_user" android:layout_width="fill_parent" android:layout_height="wrap_content" app:textColor="@color/colorDialogText" app:textSize="@dimen/dialog_input_font_size" />
+        </LinearLayout>
+    </com.anydesk.anydeskandroid.gui.element.ListenerScrollView>
+    <ImageView android:layout_gravity="end|center|top" android:id="@id/dialog_terminal_scroll_hint_top" android:focusable="false" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_scroll_hint_top" />
+    <ImageView android:layout_gravity="end|bottom|center" android:id="@id/dialog_terminal_scroll_hint_bottom" android:focusable="false" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_scroll_hint_bottom" />
+</FrameLayout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="37" android:compileSdkVersionCodename="17" package="com.anydesk.anydeskandroid" platformBuildVersionCode="37" platformBuildVersionName="17">
+    <permission android:description="@string/permission_broadcast_had_incoming_connection_description" android:label="@string/permission_broadcast_had_incoming_connection_label" android:name="com.anydesk.anydeskandroid.permission.RECEIVE_HAD_INCOMING_CONNECTION" android:protectionLevel="privileged|signature"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.hardware.faketouch" android:required="false"/>
+    <uses-feature android:name="android.hardware.usb.host" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.software.leanback" android:required="false"/>
+    <uses-permission android:name="com.samsung.android.knox.permission.KNOX_REMOTE_CONTROL"/>
+    <uses-permission android:name="android.permission.sec.MDM_REMOTE_CONTROL"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.USE_LOOPBACK_INTERFACE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.USB_PERMISSION"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
+    <uses-permission android:name="android.permission.INJECT_EVENTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCAL_NETWORK"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <queries>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+        <intent>
+            <action android:name="androidx.enterprise.feedback.action.APP_STATES"/>
+        </intent>
+    </queries>
+    <queries>
+        <intent>
+            <action android:name="android.service.wallpaper.WallpaperService"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <permission android:name="com.anydesk.anydeskandroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.anydesk.anydeskandroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:banner="@drawable/tvbanner" android:directBootAware="true" android:extractNativeLibs="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:localeConfig="@xml/locale_config" android:lockTaskMode="if_whitelisted" android:name="com.anydesk.anydeskandroid.MainApplication" android:networkSecurityConfig="@xml/network_security_config" android:requestLegacyExternalStorage="true" android:resizeableActivity="true" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:testOnly="false" android:theme="@style/AppTheme">
+        <meta-data android:name="android.content.APP_RESTRICTIONS" android:resource="@xml/app_restrictions"/>
+        <meta-data android:name="com.samsung.knoxlicense.permissions" android:value="true"/>
+        <receiver android:exported="false" android:name="com.anydesk.anydeskandroid.LocaleChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.anydesk.anydeskandroid.adcontrol.SamsungLicenseReceiver">
+            <intent-filter>
+                <action android:name="com.samsung.android.knox.intent.action.KNOX_LICENSE_STATUS"/>
+                <action android:name="com.samsung.android.knox.intent.action.LICENSE_STATUS"/>
+                <action android:name="edm.intent.action.knox_license.status"/>
+                <action android:name="edm.intent.action.license.status"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:description="@string/device_admin_description" android:exported="false" android:label="@string/app_name" android:name="com.anydesk.anydeskandroid.adcontrol.AdDeviceAdminReceiver" android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data android:name="android.app.device_admin" android:resource="@xml/device_admin"/>
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="true" android:enabled="true" android:exported="true" android:name="com.anydesk.anydeskandroid.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.anydesk.anydeskandroid.DismissIncomingRequestReceiver"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.anydesk.anydeskandroid.DismissFileManagerSystemPermissionReceiver"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.anydesk.anydeskandroid.DisconnectReceiver"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.anydesk.anydeskandroid.RemovableStorageReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <action android:name="android.intent.action.MEDIA_EJECT"/>
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED"/>
+                <action android:name="android.intent.action.MEDIA_REMOVED"/>
+                <action android:name="android.intent.action.MEDIA_BAD_REMOVAL"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"/>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_DETACHED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.anydesk.anydeskandroid.ChatDirectReplyReceiver"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.anydesk.anydeskandroid.gui.activity.WebViewActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:configChanges="density|keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.anydesk.anydeskandroid.gui.activity.HubActivity" android:theme="@style/AppTheme.NoActionBar">
+            <meta-data android:name="android.app.lib_name" android:value="adext"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="layoutDirection|locale" android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.anydesk.anydeskandroid.gui.activity.MainActivity" android:supportsPictureInPicture="true" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="com.anydesk.anydesk.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="anydesk"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="file"/>
+                <data android:scheme="content"/>
+                <data android:host="*"/>
+                <data android:pathPattern=".*\\.anydesk"/>
+                <data android:pathPattern=".*\\..*\\.anydesk"/>
+                <data android:pathPattern=".*\\..*\\..*\\.anydesk"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.anydesk"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.anydesk"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.anydesk"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.anydesk"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="content"/>
+                <data android:host="*"/>
+                <data android:mimeType="application/anydesk"/>
+            </intent-filter>
+        </activity>
+        <provider android:authorities="com.anydesk.anydeskandroid.documents.recordings" android:enabled="true" android:exported="true" android:grantUriPermissions="true" android:name="com.anydesk.anydeskandroid.AdStorageProviderRecordings" android:permission="android.permission.MANAGE_DOCUMENTS">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <provider android:authorities="com.anydesk.anydeskandroid.documents.downloads" android:enabled="true" android:exported="true" android:grantUriPermissions="true" android:name="com.anydesk.anydeskandroid.AdStorageProviderDownloads" android:permission="android.permission.MANAGE_DOCUMENTS">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <service android:exported="false" android:foregroundServiceType="specialUse" android:name="com.anydesk.anydeskandroid.AdVpnService" android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService"/>
+            </intent-filter>
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="Notifies user about an ongoing VPN connection that allows even more secure remote access via the AnyDesk network"/>
+        </service>
+        <service android:directBootAware="true" android:exported="false" android:foregroundServiceType="mediaProjection|specialUse" android:name="com.anydesk.anydeskandroid.IncomingConnectionService">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="Notifies user about an ongoing connection that lets their device be accessed and controlled remotely via the AnyDesk network"/>
+        </service>
+        <service android:exported="false" android:foregroundServiceType="specialUse" android:name="com.anydesk.anydeskandroid.ConnectionService">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="Notifies user about an ongoing connection that lets them access and control another device via the AnyDesk network"/>
+        </service>
+        <service android:directBootAware="true" android:enabled="true" android:exported="true" android:foregroundServiceType="specialUse" android:name="com.anydesk.anydeskandroid.MainService">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="Exposes an API to other apps that allows them to make use of some AnyDesk functionality"/>
+        </service>
+        <provider android:authorities="com.anydesk.anydeskandroid.fileprovider" android:directBootAware="true" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <uses-library android:name="com.sec.android.app.multiwindow" android:required="false"/>
+        <meta-data android:name="com.sec.android.support.multiwindow" android:value="true"/>
+        <provider android:authorities="com.anydesk.anydeskandroid.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

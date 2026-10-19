@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu android:id="@id/menu_activity_main_drawer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_nav_address_book" android:id="@id/nav_address_book" />
+    <item android:icon="@drawable/ic_nav_recordings" android:id="@id/nav_recordings" />
+    <item android:icon="@drawable/ic_pie_download" android:id="@id/nav_downloads" />
+    <item android:icon="@drawable/ic_nav_settings" android:id="@id/nav_settings" />
+    <item android:icon="@drawable/ic_nav_setup" android:id="@id/nav_setup" />
+    <item android:icon="@drawable/ic_nav_tutorial" android:id="@id/nav_tutorial" />
+    <item android:icon="@drawable/ic_nav_help" android:id="@id/nav_help" />
+    <item android:icon="@drawable/ic_nav_about" android:id="@id/nav_about" />
+    <item android:icon="@drawable/ic_nav_plugin" android:id="@id/nav_plugin_ad1" />
+    <item android:icon="@drawable/ic_nav_privacy_statement" android:id="@id/nav_privacy_statement" />
+    <item android:icon="@drawable/ic_nav_exit" android:id="@id/nav_exit" />
+</menu>

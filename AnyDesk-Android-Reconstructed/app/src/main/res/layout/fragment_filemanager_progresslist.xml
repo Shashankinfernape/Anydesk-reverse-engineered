@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/filemanager_progresslist_layout" android:background="@color/colorMainBackground" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_gravity="center_horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/card_file_transfer_progress" />
+    <include android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/filemanager_progress" />
+</LinearLayout>

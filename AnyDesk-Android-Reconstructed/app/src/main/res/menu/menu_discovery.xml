@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu android:id="@id/menu_discovery"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/discovery_alias" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/discovery_id" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/discovery_browse_files" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/discovery_vpn" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/discovery_tcp_tunneling" android:orderInCategory="100" app:showAsAction="never" />
+</menu>

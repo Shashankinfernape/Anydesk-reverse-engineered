@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:theme="@style/AppTheme" android:orientation="vertical" android:id="@id/dialog_alias_layout" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="?android:textColorPrimary" android:id="@id/dialog_alias_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" />
+    <com.anydesk.anydeskandroid.gui.element.AdEditText android:id="@id/dialog_alias_input" android:layout_width="fill_parent" android:layout_height="wrap_content" app:textColor="@color/colorDialogText" app:textSize="@dimen/dialog_input_font_size" />
+    <FrameLayout android:id="@id/dialog_alias_state_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="4.0dip">
+        <TextView android:id="@id/dialog_alias_state_available" android:background="@color/colorAliasStateGreen" android:padding="4.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+        <TextView android:id="@id/dialog_alias_state_taken" android:background="@color/colorAliasStateRed" android:padding="4.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+        <TextView android:id="@id/dialog_alias_state_invalid" android:background="@color/colorAliasStateRed" android:padding="4.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+        <TextView android:id="@id/dialog_alias_state_regfail" android:background="@color/colorAliasStateRed" android:padding="4.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/dialog_alias_btn_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/dialog_alias_btn_neg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/AdTextButtonStyleBase" />
+        <Button android:id="@id/dialog_alias_btn_pos" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/AdTextButtonStyleBase" />
+    </LinearLayout>
+</LinearLayout>

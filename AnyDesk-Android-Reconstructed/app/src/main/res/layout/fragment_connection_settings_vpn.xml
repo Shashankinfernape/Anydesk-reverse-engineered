@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/connection_settings_vpn_scroll_view" android:background="@color/colorMainBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/connection_settings_vpn_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/colorSettingsText" android:id="@id/setup_vpn_status" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:maxLines="1" android:singleLine="true" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+        <LinearLayout android:orientation="vertical" android:id="@id/setup_vpn_info" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/colorSettingsText" android:id="@id/setup_vpn_info_local_ip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/colorSettingsText" android:id="@id/setup_vpn_info_remote_ip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/colorSettingsText" android:id="@id/setup_vpn_info_bytes_rcvd" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/colorSettingsText" android:id="@id/setup_vpn_info_bytes_sent" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/setup_vpn_config" style="@style/SettingsGroupStyle">
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:orientation="vertical" android:id="@id/setup_vpn_config_switch" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:id="@id/setup_vpn_auto_start_layout" style="@style/SettingsLineStyle">
+                    <TextView android:id="@id/setup_vpn_auto_start_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                    <CheckBox android:id="@id/setup_vpn_auto_start_checkbox" style="@style/SettingsCheckboxStyle" />
+                </LinearLayout>
+                <FrameLayout style="@style/HorizontalDividerStyle" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/setup_vpn_config_auto" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:id="@id/setup_vpn_auto_start_ip" style="@style/SettingsVerticalStyle">
+                    <TextView android:id="@id/setup_vpn_auto_start_ip_description" style="@style/SettingsDescriptionVerticalStyle" />
+                    <TextView android:id="@id/setup_vpn_auto_start_ip_value" style="@style/SettingsValueVerticalStyle" />
+                </LinearLayout>
+                <FrameLayout style="@style/HorizontalDividerStyle" />
+                <LinearLayout android:id="@id/setup_vpn_auto_netmask" style="@style/SettingsVerticalStyle">
+                    <TextView android:id="@id/setup_vpn_auto_netmask_description" style="@style/SettingsDescriptionVerticalStyle" />
+                    <TextView android:id="@id/setup_vpn_auto_netmask_value" style="@style/SettingsValueVerticalStyle" />
+                </LinearLayout>
+                <FrameLayout style="@style/HorizontalDividerStyle" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/setup_vpn_config_manual" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:id="@id/setup_vpn_manual_local_ip" style="@style/SettingsVerticalStyle">
+                    <TextView android:id="@id/setup_vpn_manual_local_ip_description" style="@style/SettingsDescriptionVerticalStyle" />
+                    <TextView android:id="@id/setup_vpn_manual_local_ip_value" style="@style/SettingsValueVerticalStyle" />
+                </LinearLayout>
+                <FrameLayout style="@style/HorizontalDividerStyle" />
+                <LinearLayout android:id="@id/setup_vpn_manual_remote_ip" style="@style/SettingsVerticalStyle">
+                    <TextView android:id="@id/setup_vpn_manual_remote_ip_description" style="@style/SettingsDescriptionVerticalStyle" />
+                    <TextView android:id="@id/setup_vpn_manual_remote_ip_value" style="@style/SettingsValueVerticalStyle" />
+                </LinearLayout>
+                <FrameLayout style="@style/HorizontalDividerStyle" />
+                <LinearLayout android:id="@id/setup_vpn_manual_netmask" style="@style/SettingsVerticalStyle">
+                    <TextView android:id="@id/setup_vpn_manual_netmask_description" style="@style/SettingsDescriptionVerticalStyle" />
+                    <TextView android:id="@id/setup_vpn_manual_netmask_value" style="@style/SettingsValueVerticalStyle" />
+                </LinearLayout>
+                <FrameLayout style="@style/HorizontalDividerStyle" />
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="end" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <Button android:id="@id/setup_vpn_btn_start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="start" style="@style/AdTextButtonStyleBase" />
+                <Button android:id="@id/setup_vpn_btn_stop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="stop" style="@style/AdTextButtonStyleBase" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

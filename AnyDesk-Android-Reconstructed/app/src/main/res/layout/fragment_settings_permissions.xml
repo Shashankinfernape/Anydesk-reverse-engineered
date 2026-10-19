@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/settings_permissions_scroll_view" android:background="@color/colorMainBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/settings_permissions_container" style="@style/SettingsGroupStyle">
+        <LinearLayout android:id="@id/settings_group_permissions_global" style="@style/SettingsGroupStyle">
+            <TextView android:id="@id/settings_permissions_title_global" style="@style/SettingsTitleStyle" />
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_permissions_hint_global_layout" android:focusable="false" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_permissions_hint_global" style="@style/SettingsDescriptionHorizontalStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_permissions_global_sync_text_clipboard_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_permissions_global_sync_text_clipboard_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_permissions_global_sync_text_clipboard_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_permissions_global_sync_file_clipboard_layout" style="@style/SubSettingsLineStyle">
+                <TextView android:id="@id/settings_permissions_global_sync_file_clipboard_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_permissions_global_sync_file_clipboard_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_permissions_global_lock_account_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_permissions_global_lock_account_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_permissions_global_lock_account_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/settings_group_permissions_profiles" style="@style/SettingsGroupStyle">
+            <TextView android:id="@id/settings_permissions_title_profiles" style="@style/SettingsTitleStyle" />
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <FrameLayout android:id="@id/settings_permission_profiles_enable_previous_session_profiles_layout_container" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:id="@id/settings_permission_profiles_enable_previous_session_profiles_layout" style="@style/SettingsLineStyle">
+                    <TextView android:id="@id/settings_permission_profiles_enable_previous_session_profiles_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                    <CheckBox android:id="@id/settings_permission_profiles_enable_previous_session_profiles_checkbox" style="@style/SettingsCheckboxStyle" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/settings_permission_profiles_enable_previous_session_profiles_toast_overlay" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </FrameLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <FrameLayout android:id="@id/settings_permission_profiles_clear_previous_session_profiles_layout_container" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:id="@id/settings_permission_profiles_clear_previous_session_profiles_layout" android:background="?android:selectableItemBackground" style="@style/SettingsLineStyle">
+                    <TextView android:id="@id/settings_permission_profiles_clear_previous_session_profiles" style="@style/SettingsDescriptionHorizontalStyle" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/settings_permission_profiles_clear_previous_session_profiles_toast_overlay" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </FrameLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_permission_profiles_layout" style="@style/SettingsVerticalStyle">
+                <TextView android:id="@id/settings_permission_profiles_description" style="@style/SettingsDescriptionVerticalStyle" />
+                <TextView android:id="@id/settings_permission_profiles_value" style="@style/SettingsValueVerticalStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

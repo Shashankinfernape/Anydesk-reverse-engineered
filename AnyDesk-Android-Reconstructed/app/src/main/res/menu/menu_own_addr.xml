@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu android:id="@id/menu_own_addr"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/context_own_addr_setup_alias" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/context_own_addr_show_alias_id" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/context_own_addr_copy_address" android:orderInCategory="100" app:showAsAction="never" />
+</menu>

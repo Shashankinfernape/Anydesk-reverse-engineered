@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/dialog_filemanager_properties_frame" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.anydesk.anydeskandroid.gui.element.ListenerScrollView android:id="@id/dialog_filemanager_properties_scroll_view" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fadeScrollbars="false">
+        <LinearLayout android:id="@id/dialog_filemanager_properties_layout" android:padding="@dimen/dialog_padding" style="@style/SettingsGroupStyle">
+            <LinearLayout android:id="@id/dialog_filemanager_properties_counts_container" android:focusable="false" style="@style/SettingsLineStyle">
+                <ImageView android:id="@id/dialog_filemanager_properties_counts_icon" android:padding="8.0dip" android:clickable="false" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_filemanager_properties_files" app:tint="@color/colorFileManagerFilePropertiesIconTint" style="@style/SettingsIconHorizontalStyle" />
+                <TextView android:textColor="@color/colorDialogText" android:id="@id/dialog_filemanager_properties_counts" style="@style/SettingsDescriptionHorizontalStyle" />
+            </LinearLayout>
+            <FrameLayout android:id="@id/dialog_filemanager_properties_indicator_container" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.google.android.material.progressindicator.CircularProgressIndicator android:layout_gravity="center" android:id="@id/dialog_filemanager_properties_indicator" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:indeterminate="true" />
+                <LinearLayout android:id="@id/dialog_filemanager_properties_contents" android:visibility="invisible" style="@style/SettingsGroupStyle">
+                    <LinearLayout android:id="@id/dialog_filemanager_properties_size_container" style="@style/SettingsGroupStyle">
+                        <TextView android:textColor="@color/colorDialogText" android:id="@id/dialog_filemanager_properties_size_container_title" android:paddingTop="16.0dip" android:paddingBottom="0.0dip" style="@style/SettingsTitleStyle" />
+                        <LinearLayout android:id="@id/dialog_filemanager_properties_size_layout" android:focusable="false" style="@style/SettingsLineStyle">
+                            <TextView android:textColor="@color/colorDialogText" android:id="@id/dialog_filemanager_properties_size" style="@style/SettingsDescriptionHorizontalStyle" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@id/dialog_filemanager_properties_writetime_container" android:visibility="gone" style="@style/SettingsGroupStyle">
+                        <TextView android:textColor="@color/colorDialogText" android:id="@id/dialog_filemanager_properties_writetime_container_title" android:paddingTop="16.0dip" android:paddingBottom="0.0dip" style="@style/SettingsTitleStyle" />
+                        <LinearLayout android:id="@id/dialog_filemanager_properties_writetime_layout" android:focusable="false" style="@style/SettingsLineStyle">
+                            <TextView android:textColor="@color/colorDialogText" android:id="@id/dialog_filemanager_properties_writetime" style="@style/SettingsDescriptionHorizontalStyle" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </com.anydesk.anydeskandroid.gui.element.ListenerScrollView>
+    <ImageView android:layout_gravity="center|top" android:id="@id/dialog_filemanager_properties_scroll_hint_top" android:focusable="false" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_scroll_hint_top" />
+    <ImageView android:layout_gravity="bottom|center" android:id="@id/dialog_filemanager_properties_scroll_hint_bottom" android:focusable="false" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_scroll_hint_bottom" />
+</FrameLayout>

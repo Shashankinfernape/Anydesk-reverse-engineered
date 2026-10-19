@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/dialog_account_sso_orga_scroll_view_container" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.anydesk.anydeskandroid.gui.element.ListenerScrollView android:id="@id/dialog_account_sso_orga_scroll_view" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fadeScrollbars="false">
+        <FrameLayout android:id="@id/dialog_account_sso_orga_layout_container" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.material.progressindicator.CircularProgressIndicator android:layout_gravity="center" android:id="@id/dialog_account_sso_orga_progressindicator" android:focusable="false" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:indeterminate="true" />
+            <LinearLayout android:orientation="vertical" android:id="@id/dialog_account_sso_orga_layout" android:padding="@dimen/dialog_padding" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <androidx.cardview.widget.CardView android:id="@id/dialog_account_sso_orga_error_card" android:visibility="gone" android:layout_marginBottom="8.0dip" style="@style/AccountErrorCardStyle">
+                    <TextView android:id="@id/dialog_account_sso_orga_error_text" style="@style/AccountTextStyleErrorCard" />
+                </androidx.cardview.widget.CardView>
+                <com.anydesk.anydeskandroid.gui.element.AdEditText android:id="@id/dialog_account_sso_orga_error_input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" app:textColor="@color/colorDialogText" app:textSize="@dimen/dialog_input_font_size" />
+            </LinearLayout>
+        </FrameLayout>
+    </com.anydesk.anydeskandroid.gui.element.ListenerScrollView>
+    <ImageView android:layout_gravity="center|top" android:id="@id/dialog_account_sso_orga_scroll_hint_top" android:focusable="false" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_scroll_hint_top" />
+    <ImageView android:layout_gravity="bottom|center" android:id="@id/dialog_account_sso_orga_scroll_hint_bottom" android:focusable="false" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_scroll_hint_bottom" />
+</FrameLayout>

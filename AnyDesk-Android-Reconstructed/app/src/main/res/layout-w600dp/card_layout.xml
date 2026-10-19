@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/main_fragment_card_container" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/card_addr" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/main_fragment_card_subcontainer_wide_screen" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="@dimen/main_card_outgoing_margin_horizontal_top" android:layout_marginBottom="@dimen/main_card_outgoing_margin_horizontal_bottom" android:layout_weight="1.0" android:layout_marginStart="@dimen/main_card_outgoing_margin_horizontal_start" android:layout_marginEnd="@dimen/main_card_outgoing_margin_horizontal_end" layout="@layout/card_disconnect_outgoing" />
+        <include android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="@dimen/main_card_incoming_margin_horizontal_top" android:layout_marginBottom="@dimen/main_card_incoming_margin_horizontal_bottom" android:layout_weight="1.0" android:layout_marginStart="@dimen/main_card_incoming_margin_horizontal_start" android:layout_marginEnd="@dimen/main_card_incoming_margin_horizontal_end" layout="@layout/card_disconnect_incoming" />
+        <include android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="@dimen/main_card_incoming_margin_horizontal_top" android:layout_marginBottom="@dimen/main_card_incoming_margin_horizontal_bottom" android:layout_weight="1.0" android:layout_marginStart="@dimen/main_card_incoming_margin_horizontal_start" android:layout_marginEnd="@dimen/main_card_incoming_margin_horizontal_end" layout="@layout/card_own_addr" />
+    </LinearLayout>
+</LinearLayout>
