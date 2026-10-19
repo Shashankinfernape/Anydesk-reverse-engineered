@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/chat_title_layout" android:paddingLeft="@dimen/dialog_padding" android:paddingTop="@dimen/dialog_padding" android:paddingRight="@dimen/dialog_padding" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_gravity="center_vertical" android:id="@id/chat_title" android:focusable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="?android:windowTitleStyle" />
+        <ImageButton android:id="@id/chat_log_btn" android:layout_marginEnd="8.0dip" app:srcCompat="@drawable/ic_view_dial_recent" app:tint="@color/chat_button_activatable_color" style="@style/AdImageButtonStyleChatCtrl" />
+        <ImageButton android:id="@id/chat_close_btn" app:srcCompat="@drawable/ic_key_close" app:tint="@color/colorPopupMenuIconTint" style="@style/AdImageButtonStyleChatCtrl" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/chat_history_container" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/chat_divider" android:layout_below="@id/chat_title_layout" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:stackFromEnd="true" />
+    <FrameLayout android:id="@id/chat_divider" android:focusable="false" android:layout_above="@id/chat_controls" style="@style/HorizontalDividerStyle" />
+    <FrameLayout android:id="@id/chat_controls" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="horizontal" android:padding="8.0dip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <EditText android:id="@id/chat_editor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <ImageButton android:layout_gravity="center" android:id="@id/chat_send_button" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_key_send_text" style="@style/AdImageButtonStyleBase" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/chat_disable_overlay" android:focusable="false" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/filemanager_roster_item_drag_shadow_layout" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="@dimen/filemanager_roster_item_drag_shadow_alpha"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/filemanager_roster_item_drag_shadow_icon" android:focusable="false" android:layout_width="@dimen/filemanager_roster_item_drag_icon_size" android:layout_height="@dimen/filemanager_roster_item_drag_icon_size" android:scaleType="fitCenter" app:tint="@color/colorFileManagerFileItemIconTint" />
+    <TextView android:layout_gravity="end|center|top" android:id="@id/filemanager_roster_item_drag_shadow_badge" android:visibility="invisible" android:layout_marginTop="@dimen/filemanager_roster_item_drag_badge_margin_top" style="@style/FileManagerFileItemDragBadgeStyle" />
+</FrameLayout>

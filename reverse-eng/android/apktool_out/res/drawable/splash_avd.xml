@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$splash_avd__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="path_7" android:animation="@drawable/$splash_avd__1" />
+    <target android:name="path_6" android:animation="@drawable/$splash_avd__2" />
+    <target android:name="path_13" android:animation="@drawable/$splash_avd__3" />
+</animated-vector>

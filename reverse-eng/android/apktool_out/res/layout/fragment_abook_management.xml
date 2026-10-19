@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/abook_management_layout" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/abook_management_ctrl_layout" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.anydesk.anydeskandroid.gui.element.AdEditText android:id="@id/abook_management_search_layout" android:layout_width="0.0dip" android:layout_height="@dimen/addr_box_height" android:layout_marginTop="8.0dip" android:layout_marginBottom="16.0dip" android:layout_weight="1.0" android:layout_marginStart="16.0dip" android:layout_marginEnd="@dimen/main_fragment_button_separation_margin_horizontal" app:textColor="@color/colorDialogText" app:textSize="@dimen/dialog_input_font_size" />
+        <ImageView android:id="@id/abook_management_button_new_item" android:layout_marginTop="11.0dip" android:layout_marginBottom="16.0dip" android:layout_marginStart="@dimen/main_fragment_button_separation_margin_horizontal" android:layout_marginEnd="16.0dip" style="@style/AdImageButtonStyleCardAbookRoster" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/abook_management_rosters" android:focusable="false" android:scrollbars="vertical" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fadeScrollbars="false" />
+</LinearLayout>

@@ -18,3 +18,9 @@ AnyDesk-Android-Reconstructed/app/src/main/java/com/anydesk/jni/DeskRTCaptureBri
 # Exclude evidence generation scripts from code statistics
 AnyDesk-Windows-Reconstructed/scripts/build_evidence.py linguist-documentation
 AnyDesk-Windows-Reconstructed/scripts/update_master_plan.py linguist-documentation
+scripts/build_evidence.py linguist-documentation
+scripts/update_master_plan.py linguist-documentation
+
+# Exclude REA reverse engineering outputs and documentation from code statistics
+reverse-eng/** linguist-vendored linguist-generated
+docs/** linguist-documentation

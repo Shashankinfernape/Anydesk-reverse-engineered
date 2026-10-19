@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:columnCount="2"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/network_info_conn_relay_label" style="@style/NetworkInfoConnLabel" />
+    <TextView android:id="@id/network_info_conn_relay" style="@style/NetworkInfoConnValue" />
+    <TextView android:id="@id/network_info_conn_method_label" style="@style/NetworkInfoConnLabel" />
+    <TextView android:id="@id/network_info_conn_method" style="@style/NetworkInfoConnValue" />
+    <TextView android:id="@id/network_info_conn_proxy_label" style="@style/NetworkInfoConnLabel" />
+    <TextView android:id="@id/network_info_conn_proxy" style="@style/NetworkInfoConnValue" />
+    <TextView android:id="@id/network_info_conn_proxy_auth_label" style="@style/NetworkInfoConnLabel" />
+    <TextView android:id="@id/network_info_conn_proxy_auth" style="@style/NetworkInfoConnValue" />
+    <TextView android:id="@id/network_info_conn_encryption_label" style="@style/NetworkInfoConnLabel" />
+    <TextView android:id="@id/network_info_conn_encryption" style="@style/NetworkInfoConnValue" />
+</GridLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path name="ad_files" path="" />
+    <device-protected-files-path name="ad_files_dp" path="" />
+    <root-path name="root" path="" />
+    <external-path name="download" path="" />
+</paths>

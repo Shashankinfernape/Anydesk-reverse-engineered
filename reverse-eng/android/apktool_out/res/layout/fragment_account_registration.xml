@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/account_registration_scroll_view" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/account_registration_layout_container" android:background="@color/colorMainBackground" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.material.progressindicator.CircularProgressIndicator android:layout_gravity="center" android:id="@id/account_registration_progressindicator" android:focusable="false" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:indeterminate="true" />
+        <LinearLayout android:gravity="start" android:orientation="vertical" android:id="@id/account_registration_layout" android:paddingTop="@dimen/activity_vertical_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/activity_horizontal_margin" android:paddingEnd="@dimen/activity_horizontal_margin">
+            <androidx.cardview.widget.CardView android:id="@id/account_registration_error_card" android:visibility="gone" android:layout_marginBottom="16.0dip" style="@style/AccountErrorCardStyle">
+                <TextView android:id="@id/account_registration_error_text" style="@style/AccountTextStyleErrorCard" />
+            </androidx.cardview.widget.CardView>
+            <com.anydesk.anydeskandroid.gui.element.AccountAsteriskLabelledText android:id="@id/account_registration_purpose_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <RelativeLayout android:id="@id/account_registration_purpose_spinner_layout" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <Spinner android:id="@id/account_registration_purpose_spinner" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <TextView android:id="@id/account_registration_purpose_spinner_state" android:visibility="gone" style="@style/AccountTextStyleInputState" />
+            <LinearLayout android:orientation="vertical" android:id="@id/account_registration_professional_use_layout" android:focusable="false" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.anydesk.anydeskandroid.gui.element.AccountAsteriskLabelledText android:id="@id/account_registration_company_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+                <com.anydesk.anydeskandroid.gui.element.AdEditText android:id="@id/account_registration_company_input" android:layout_width="fill_parent" android:layout_height="wrap_content" app:textColor="@color/colorAccountTextPrimary" />
+                <TextView android:id="@id/account_registration_company_input_state" android:visibility="gone" style="@style/AccountTextStyleInputState" />
+                <com.anydesk.anydeskandroid.gui.element.AccountAsteriskLabelledText android:id="@id/account_registration_country_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+                <RelativeLayout android:id="@id/account_registration_country_spinner_layout" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <Spinner android:id="@id/account_registration_country_spinner" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <TextView android:id="@id/account_registration_country_spinner_state" android:visibility="gone" style="@style/AccountTextStyleInputState" />
+                <com.anydesk.anydeskandroid.gui.element.AccountAsteriskLabelledText android:id="@id/account_registration_phone_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+                <com.anydesk.anydeskandroid.gui.element.AdEditText android:id="@id/account_registration_phone_input" android:layout_width="fill_parent" android:layout_height="wrap_content" app:inputType="phone" app:textColor="@color/colorAccountTextPrimary" />
+                <TextView android:id="@id/account_registration_phone_input_state" android:visibility="gone" style="@style/AccountTextStyleInputState" />
+                <com.anydesk.anydeskandroid.gui.element.AccountAsteriskLabelledText android:id="@id/account_registration_usercount_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+                <RelativeLayout android:id="@id/account_registration_usercount_spinner_layout" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <Spinner android:id="@id/account_registration_usercount_spinner" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <TextView android:id="@id/account_registration_usercount_spinner_state" android:visibility="gone" style="@style/AccountTextStyleInputState" />
+                <TextView android:id="@id/account_registration_job_title" android:layout_marginTop="16.0dip" style="@style/AccountTextStyleMessagePrimary" />
+                <com.anydesk.anydeskandroid.gui.element.AdEditText android:id="@id/account_registration_job_input" android:layout_width="fill_parent" android:layout_height="wrap_content" app:textColor="@color/colorAccountTextPrimary" />
+            </LinearLayout>
+            <com.anydesk.anydeskandroid.gui.element.AccountAsteriskLabelledText android:id="@id/account_registration_first_name_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:isLabelVisible="false" />
+            <com.anydesk.anydeskandroid.gui.element.AdEditText android:id="@id/account_registration_first_name_input" android:layout_width="fill_parent" android:layout_height="wrap_content" app:textColor="@color/colorAccountTextPrimary" />
+            <TextView android:id="@id/account_registration_first_name_input_state" android:visibility="gone" style="@style/AccountTextStyleInputState" />
+            <com.anydesk.anydeskandroid.gui.element.AccountAsteriskLabelledText android:id="@id/account_registration_surname_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:isLabelVisible="false" />
+            <com.anydesk.anydeskandroid.gui.element.AdEditText android:id="@id/account_registration_surname_input" android:layout_width="fill_parent" android:layout_height="wrap_content" app:textColor="@color/colorAccountTextPrimary" />
+            <TextView android:id="@id/account_registration_surname_input_state" android:visibility="gone" style="@style/AccountTextStyleInputState" />
+            <com.anydesk.anydeskandroid.gui.element.AccountAsteriskLabelledText android:id="@id/account_registration_email_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+            <com.anydesk.anydeskandroid.gui.element.AdEditTextSecure android:id="@id/account_registration_email_input" android:layout_width="fill_parent" android:layout_height="wrap_content" app:textColor="@color/colorAccountTextPrimary" />
+            <TextView android:id="@id/account_registration_email_input_state" android:visibility="gone" style="@style/AccountTextStyleInputState" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+                <com.anydesk.anydeskandroid.gui.element.AccountAsteriskLabelledText android:id="@id/account_registration_password_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <ImageView android:id="@id/account_registration_password_info" android:background="@drawable/button_main_fragment" android:focusable="true" android:clickable="true" android:layout_width="18.0sp" android:layout_height="18.0sp" android:layout_margin="4.0sp" android:scaleType="fitCenter" android:stateListAnimator="@animator/card_state_list_animator" app:srcCompat="@drawable/ic_perm_sysinfo" app:tint="@color/colorAccountTextPrimary" />
+            </LinearLayout>
+            <com.anydesk.anydeskandroid.gui.element.AdEditTextSecure android:id="@id/account_registration_password_input" android:layout_width="fill_parent" android:layout_height="wrap_content" app:inputType="textPassword" app:textColor="@color/colorAccountTextPrimary" />
+            <TextView android:id="@id/account_registration_password_input_state" android:visibility="gone" style="@style/AccountTextStyleInputState" />
+            <com.anydesk.anydeskandroid.gui.element.AccountAsteriskLabelledText android:id="@id/account_registration_password_repeat_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+            <com.anydesk.anydeskandroid.gui.element.AdEditTextSecure android:id="@id/account_registration_password_repeat_input" android:layout_width="fill_parent" android:layout_height="wrap_content" app:inputType="textPassword" app:textColor="@color/colorAccountTextPrimary" />
+            <TextView android:id="@id/account_registration_password_repeat_input_state" android:visibility="gone" style="@style/AccountTextStyleInputState" />
+            <com.anydesk.anydeskandroid.gui.element.AccountAsteriskLabelledText android:id="@id/account_registration_required_field_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layoutDirection="rtl" app:labelledTextSize="14.0sp" />
+            <TextView android:textColor="@color/colorPrimary" android:id="@id/account_registration_unsubscribe_hint" android:layout_marginTop="32.0dip" style="@style/AccountTextStyleMessageSecondary" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+                <CheckBox android:id="@id/account_registration_newsletter_checkbox" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="16.0sp" android:id="@id/account_registration_newsletter_checkbox_description" style="@style/AccountTextStyleMessagePrimary" />
+            </LinearLayout>
+            <TextView android:textColorLink="@color/account_registration_clickable_text_color" android:id="@id/account_registration_privacy_hint" android:layout_marginTop="8.0dip" style="@style/AccountTextStyleMessageSecondary" />
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/account_registration_tos_checkbox_layout" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                <CheckBox android:id="@id/account_registration_tos_checkbox" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/account_registration_tos_checkbox_description" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <com.anydesk.anydeskandroid.gui.element.TightTextView android:textSize="16.0sp" android:textColorLink="@color/account_registration_clickable_text_color" android:id="@id/account_registration_tos_checkbox_description" app:layout_constrainedWidth="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/account_registration_tos_checkbox_asterisk" app:layout_constraintStart_toEndOf="@id/account_registration_tos_checkbox" app:layout_constraintTop_toTopOf="parent" style="@style/AccountTextStyleMessagePrimary" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/colorPrimary" android:id="@id/account_registration_tos_checkbox_asterisk" android:text="*" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/account_registration_tos_checkbox_description" app:layout_constraintTop_toTopOf="parent" style="@style/AccountTextStyleMessagePrimary" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView android:id="@id/account_registration_tos_checkbox_state" android:visibility="gone" style="@style/AccountTextStyleInputState" />
+            <Button android:layout_gravity="end" android:id="@id/account_registration_register_btn" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" style="@style/AdTextButtonStyleBase" />
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>

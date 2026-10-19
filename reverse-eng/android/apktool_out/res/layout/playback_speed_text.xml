@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/playback_speed_text_view" android:background="@color/colorTransparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="gravity"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu android:id="@id/menu_abook_overflow"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/menu_abook_overflow_manage_abooks" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/menu_abook_overflow_manage_tags" android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@id/menu_abook_overflow_filter_tags" android:orderInCategory="100" app:showAsAction="never" />
+</menu>

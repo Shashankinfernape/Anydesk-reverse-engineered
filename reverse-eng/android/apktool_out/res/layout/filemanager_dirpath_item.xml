@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/filemanager_dirpath_item_container" android:focusable="false" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/filemanager_dirpath_item_breadcrumb" android:focusable="false" android:visibility="gone" android:clickable="false" android:text=" / " style="@style/FileManagerDirPathStyle" />
+    <TextView android:id="@id/filemanager_dirpath_item_text" android:focusable="true" android:clickable="true" android:stateListAnimator="@animator/filemanager_dirpath_item_animator" style="@style/FileManagerDirPathStyle" />
+</LinearLayout>

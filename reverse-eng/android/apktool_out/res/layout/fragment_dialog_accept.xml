@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/dialog_accept_title_container" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip">
+        <androidx.cardview.widget.CardView android:id="@id/dialog_accept_title_icon_container" android:focusable="false" android:clickable="false" android:layout_width="36.0dip" android:layout_height="36.0dip" app:cardBackgroundColor="@color/colorTransparent" app:cardCornerRadius="18.0dip" app:cardElevation="0.0dip" app:cardPreventCornerOverlap="false" app:contentPadding="0.0dip">
+            <ImageView android:id="@id/dialog_accept_title_icon" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" app:srcCompat="@drawable/unknown_user" />
+        </androidx.cardview.widget.CardView>
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:ellipsize="end" android:id="@id/dialog_accept_title_text" android:focusable="false" android:clickable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" android:layout_marginStart="8.0dip" />
+    </LinearLayout>
+    <ScrollView android:id="@id/dialog_accept_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:id="@id/dialog_accept_container" style="@style/SettingsGroupStyle">
+            <TextView android:id="@id/dialog_accept_msg" style="@style/SettingsHintStyle" />
+            <TextView android:textStyle="bold" android:id="@id/dialog_accept_watermark" android:visibility="gone" style="@style/SettingsHintStyle" />
+            <FrameLayout style="@style/DialogDividerStyle" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/dialog_accept_open_chat_icon" android:background="@drawable/button_incoming_action" android:focusable="true" android:scaleType="center" app:srcCompat="@drawable/ic_pie_chat" app:tint="@color/colorPopupMenuIconTint" style="@style/SettingsIconHorizontalStyle" />
+                <TextView android:id="@id/dialog_accept_open_chat_text" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/DialogDividerStyle" />
+            <TextView android:id="@id/dialog_accept_profiles_list_title" android:paddingTop="16.0dip" android:paddingBottom="0.0dip" style="@style/SettingsTitleStyle" />
+            <Spinner android:id="@id/dialog_accept_profiles_list" android:layout_width="fill_parent" android:layout_marginEnd="@dimen/accept_dialog_spinner_margin_end" style="@style/SettingsCheckboxStyle" />
+            <LinearLayout android:id="@id/dialog_accept_permissions" style="@style/SettingsGroupStyle">
+                <TextView android:id="@id/dialog_accept_permissions_title" android:paddingTop="16.0dip" style="@style/SettingsTitleStyle" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/dialog_accept_permissions_hint_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/colorSettingsText" android:id="@id/dialog_accept_permissions_hint" android:layout_weight="1.0" style="@style/SettingsHintStyle" />
+                    <ImageView android:id="@id/dialog_accept_permissions_detail_switch" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_key_shrink" app:tint="?android:textColorSecondary" />
+                </LinearLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout android:orientation="horizontal" android:id="@id/dialog_accept_permissions_icon_container" android:layout_width="wrap_content" android:layout_margin="16.0dip" style="@style/SettingsGroupStyle">
+                    <androidx.constraintlayout.helper.widget.Flow android:layout_width="wrap_content" android:layout_height="wrap_content" app:constraint_referenced_ids="dialog_accept_permissions_audio_icon,                                                        dialog_accept_permissions_ctrl_icon,                                                        dialog_accept_permissions_show_pointer_icon,                                                        dialog_accept_permissions_clipbrd_icon,                                                        dialog_accept_permissions_clipbrd_files_icon,                                                        dialog_accept_permissions_file_manager_icon,                                                        dialog_accept_permissions_sysinfo_icon,                                                        dialog_accept_permissions_tcp_tunnel_icon,                                                        dialog_accept_permissions_vpn_icon,                                                        dialog_accept_permissions_record_icon,                                                        dialog_accept_permissions_modify_forbidden_windows_icon" app:flow_horizontalAlign="start" app:flow_horizontalGap="4.0dip" app:flow_verticalGap="8.0dip" app:flow_wrapMode="aligned" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                    <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_audio_icon" app:src="@drawable/ic_perm_audio" style="@style/SettingsIconHorizontalStyle" />
+                    <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_ctrl_icon" app:src="@drawable/ic_perm_input" style="@style/SettingsIconHorizontalStyle" />
+                    <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_show_pointer_icon" app:src="@drawable/ic_perm_user_pointer" style="@style/SettingsIconHorizontalStyle" />
+                    <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_clipbrd_icon" app:src="@drawable/ic_perm_clipboard" style="@style/SettingsIconHorizontalStyle" />
+                    <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_clipbrd_files_icon" app:src="@drawable/ic_perm_clipboard_files" style="@style/SettingsIconHorizontalStyle" />
+                    <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_file_manager_icon" app:src="@drawable/ic_perm_file_manager" style="@style/SettingsIconHorizontalStyle" />
+                    <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_sysinfo_icon" app:src="@drawable/ic_perm_sysinfo" style="@style/SettingsIconHorizontalStyle" />
+                    <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_tcp_tunnel_icon" app:src="@drawable/ic_perm_tcp_tunnel" style="@style/SettingsIconHorizontalStyle" />
+                    <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_vpn_icon" app:src="@drawable/ic_perm_vpn" style="@style/SettingsIconHorizontalStyle" />
+                    <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_record_icon" app:src="@drawable/ic_perm_record_session" style="@style/SettingsIconHorizontalStyle" />
+                    <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_modify_forbidden_windows_icon" app:src="@drawable/ic_perm_modify_forbidden_windows" style="@style/SettingsIconHorizontalStyle" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <LinearLayout android:id="@id/dialog_accept_permissions_detail_container" style="@style/SettingsGroupStyle">
+                    <FrameLayout style="@style/DialogDividerStyle" />
+                    <LinearLayout android:id="@id/dialog_accept_permissions_detail_audio_layout" style="@style/SettingsLineStyle">
+                        <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_detail_audio_icon" app:src="@drawable/ic_perm_audio" style="@style/SettingsIconHorizontalStyle" />
+                        <TextView android:id="@id/dialog_accept_permissions_detail_audio_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                        <CheckBox android:id="@id/dialog_accept_permissions_detail_audio_checkbox" style="@style/SettingsCheckboxStyle" />
+                    </LinearLayout>
+                    <FrameLayout style="@style/DialogDividerStyle" />
+                    <LinearLayout android:id="@id/dialog_accept_permissions_detail_ctrl_layout" style="@style/SettingsLineStyle">
+                        <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_detail_ctrl_icon" app:src="@drawable/ic_perm_input" style="@style/SettingsIconHorizontalStyle" />
+                        <TextView android:id="@id/dialog_accept_permissions_detail_ctrl_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                        <CheckBox android:id="@id/dialog_accept_permissions_detail_ctrl_checkbox" style="@style/SettingsCheckboxStyle" />
+                    </LinearLayout>
+                    <FrameLayout style="@style/DialogDividerStyle" />
+                    <LinearLayout android:id="@id/dialog_accept_permissions_detail_show_pointer_layout" style="@style/SettingsLineStyle">
+                        <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_detail_show_pointer_icon" app:src="@drawable/ic_perm_user_pointer" style="@style/SettingsIconHorizontalStyle" />
+                        <TextView android:id="@id/dialog_accept_permissions_detail_show_pointer_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                        <CheckBox android:id="@id/dialog_accept_permissions_detail_show_pointer_checkbox" style="@style/SettingsCheckboxStyle" />
+                    </LinearLayout>
+                    <FrameLayout style="@style/DialogDividerStyle" />
+                    <LinearLayout android:id="@id/dialog_accept_permissions_detail_clipbrd_layout" style="@style/SettingsLineStyle">
+                        <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_detail_clipbrd_icon" app:src="@drawable/ic_perm_clipboard" style="@style/SettingsIconHorizontalStyle" />
+                        <TextView android:id="@id/dialog_accept_permissions_detail_clipbrd_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                        <CheckBox android:id="@id/dialog_accept_permissions_detail_clipbrd_checkbox" style="@style/SettingsCheckboxStyle" />
+                    </LinearLayout>
+                    <FrameLayout style="@style/DialogDividerStyle" />
+                    <LinearLayout android:id="@id/dialog_accept_permissions_detail_clipbrd_files_layout" style="@style/SubSettingsLineStyle">
+                        <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_detail_clipbrd_files_icon" app:src="@drawable/ic_perm_clipboard_files" style="@style/SettingsIconHorizontalStyle" />
+                        <TextView android:id="@id/dialog_accept_permissions_detail_clipbrd_files_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                        <CheckBox android:id="@id/dialog_accept_permissions_detail_clipbrd_files_checkbox" style="@style/SettingsCheckboxStyle" />
+                    </LinearLayout>
+                    <FrameLayout style="@style/DialogDividerStyle" />
+                    <LinearLayout android:id="@id/dialog_accept_permissions_detail_file_manager_layout" style="@style/SettingsLineStyle">
+                        <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_detail_file_manager_icon" app:src="@drawable/ic_perm_file_manager" style="@style/SettingsIconHorizontalStyle" />
+                        <TextView android:id="@id/dialog_accept_permissions_detail_file_manager_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                        <CheckBox android:id="@id/dialog_accept_permissions_detail_file_manager_checkbox" style="@style/SettingsCheckboxStyle" />
+                    </LinearLayout>
+                    <FrameLayout style="@style/DialogDividerStyle" />
+                    <LinearLayout android:id="@id/dialog_accept_permissions_detail_sysinfo_layout" style="@style/SettingsLineStyle">
+                        <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_detail_sysinfo_icon" app:src="@drawable/ic_perm_sysinfo" style="@style/SettingsIconHorizontalStyle" />
+                        <TextView android:id="@id/dialog_accept_permissions_detail_sysinfo_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                        <CheckBox android:id="@id/dialog_accept_permissions_detail_sysinfo_checkbox" style="@style/SettingsCheckboxStyle" />
+                    </LinearLayout>
+                    <FrameLayout style="@style/DialogDividerStyle" />
+                    <LinearLayout android:id="@id/dialog_accept_permissions_detail_tcp_tunnel_layout" style="@style/SettingsLineStyle">
+                        <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_detail_tcp_tunnel_icon" app:src="@drawable/ic_perm_tcp_tunnel" style="@style/SettingsIconHorizontalStyle" />
+                        <TextView android:id="@id/dialog_accept_permissions_detail_tcp_tunnel_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                        <CheckBox android:id="@id/dialog_accept_permissions_detail_tcp_tunnel_checkbox" style="@style/SettingsCheckboxStyle" />
+                    </LinearLayout>
+                    <FrameLayout style="@style/DialogDividerStyle" />
+                    <LinearLayout android:id="@id/dialog_accept_permissions_detail_vpn_layout" style="@style/SettingsLineStyle">
+                        <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_detail_vpn_icon" app:src="@drawable/ic_perm_vpn" style="@style/SettingsIconHorizontalStyle" />
+                        <TextView android:id="@id/dialog_accept_permissions_detail_vpn_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                        <CheckBox android:id="@id/dialog_accept_permissions_detail_vpn_checkbox" style="@style/SettingsCheckboxStyle" />
+                    </LinearLayout>
+                    <FrameLayout style="@style/DialogDividerStyle" />
+                    <LinearLayout android:id="@id/dialog_accept_permissions_detail_record_layout" style="@style/SettingsLineStyle">
+                        <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_detail_record_icon" app:src="@drawable/ic_perm_record_session" style="@style/SettingsIconHorizontalStyle" />
+                        <TextView android:id="@id/dialog_accept_permissions_detail_record_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                        <CheckBox android:id="@id/dialog_accept_permissions_detail_record_checkbox" style="@style/SettingsCheckboxStyle" />
+                    </LinearLayout>
+                    <FrameLayout style="@style/DialogDividerStyle" />
+                    <LinearLayout android:id="@id/dialog_accept_permissions_detail_modify_forbidden_windows_layout" style="@style/SettingsLineStyle">
+                        <com.anydesk.anydeskandroid.gui.element.PermissionIcon android:id="@id/dialog_accept_permissions_detail_modify_forbidden_windows_icon" app:src="@drawable/ic_perm_modify_forbidden_windows" style="@style/SettingsIconHorizontalStyle" />
+                        <TextView android:id="@id/dialog_accept_permissions_detail_modify_forbidden_windows_description" style="@style/SettingsDescriptionWithIconHorizontalStyle" />
+                        <CheckBox android:id="@id/dialog_accept_permissions_detail_modify_forbidden_windows_checkbox" style="@style/SettingsCheckboxStyle" />
+                    </LinearLayout>
+                    <FrameLayout style="@style/DialogDividerStyle" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

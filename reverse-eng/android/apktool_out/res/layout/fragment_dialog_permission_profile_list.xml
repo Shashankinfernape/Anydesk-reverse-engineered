@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/dialog_permission_profile_list_layout" android:padding="@dimen/dialog_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/dialog_permission_profile_list_ctrl_layout" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.anydesk.anydeskandroid.gui.element.AdEditText android:id="@id/dialog_permission_profile_input_container" android:layout_width="0.0dip" android:layout_height="@dimen/addr_box_height" android:layout_marginTop="8.0dip" android:layout_weight="1.0" android:layout_marginEnd="@dimen/main_fragment_button_separation_margin_horizontal" app:textColor="@color/colorDialogText" app:textSize="@dimen/dialog_input_font_size" />
+        <ImageView android:id="@id/dialog_permission_profile_list_new_item_btn" android:layout_marginTop="11.0dip" android:layout_marginStart="@dimen/main_fragment_button_separation_margin_horizontal" android:layout_marginEnd="@dimen/main_fragment_button_separation_margin_horizontal" style="@style/AdImageButtonStyleCardTextInput" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/dialog_permission_profile_list_items_view" android:focusable="false" android:scrollbars="vertical" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/account_logged_in_scroll_view" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/account_logged_in_container" android:background="@color/colorMainBackground" android:paddingTop="@dimen/account_logged_in_header_margin_top" android:paddingBottom="@dimen/activity_vertical_margin" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/activity_horizontal_margin" android:paddingEnd="@dimen/activity_horizontal_margin">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/account_logged_in_header" android:focusable="false" android:layout_width="fill_parent" android:layout_height="@dimen/account_logged_in_header_height">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/colorAccountInitialsText" android:gravity="center" android:id="@id/account_logged_in_header_initials" android:background="@drawable/account_initials_background" android:focusable="false" android:layout_width="@dimen/account_initials_size" android:layout_height="@dimen/account_initials_size" android:maxLines="1" android:textAlignment="gravity" />
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/account_logged_in_header_metadata" android:focusable="false" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:paddingStart="8.0dip">
+                <HorizontalScrollView android:id="@id/account_logged_in_header_fullname_container" android:background="@drawable/filemanager_card_item_horizontalscrollview_background" android:focusable="true" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" app:layout_constraintBottom_toTopOf="@id/account_logged_in_header_email_container" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed">
+                    <TextView android:id="@id/account_logged_in_header_fullname" android:clickable="false" android:maxLines="1" style="@style/AccountTextStyleMessagePrimary" />
+                </HorizontalScrollView>
+                <HorizontalScrollView android:id="@id/account_logged_in_header_email_container" android:background="@drawable/filemanager_card_item_horizontalscrollview_background" android:focusable="true" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/account_logged_in_header_fullname_container">
+                    <TextView android:id="@id/account_logged_in_header_email" android:clickable="false" android:maxLines="1" style="@style/AccountTextStyleMessageSecondary" />
+                </HorizontalScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+        <TextView android:id="@id/account_logged_in_organization" android:layout_marginTop="8.0dip" style="@style/AccountTextStyleMessagePrimary" />
+        <TextView android:id="@id/account_logged_in_license" android:layout_marginTop="8.0dip" style="@style/AccountTextStyleMessagePrimary" />
+        <com.google.android.material.button.MaterialButton android:layout_gravity="end" android:id="@id/account_logged_in_myad_btn" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" app:icon="@drawable/ic_account_user" style="@style/AdTextButtonStyleMaterial" />
+        <Button android:layout_gravity="end" android:id="@id/account_logged_in_logout_btn" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" style="@style/AdTextButtonStyleBase" />
+        <Button android:layout_gravity="end" android:id="@id/account_logged_in_delete_btn" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" style="@style/AdTextButtonStyleBase" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu android:id="@id/menu_webview_action_bar"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_copy" android:id="@id/action_copy_address" android:orderInCategory="1" app:iconTint="#ffffffff" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_pie_close" android:id="@id/action_close" android:orderInCategory="100" app:iconTint="#ffffffff" app:showAsAction="ifRoom" />
+</menu>

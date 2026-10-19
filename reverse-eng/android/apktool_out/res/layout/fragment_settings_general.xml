@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/settings_general_scroll_view" android:background="@color/colorMainBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/settings_general_container" style="@style/SettingsGroupStyle">
+        <LinearLayout android:id="@id/settings_group_general_sound" style="@style/SettingsGroupStyle">
+            <TextView android:id="@id/settings_general_title_sound" style="@style/SettingsTitleStyle" />
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_general_sound_on_incoming_connection_request_active_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_general_sound_on_incoming_connection_request_active_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_general_sound_on_incoming_connection_request_active_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_general_sound_on_incoming_connection_request_layout" android:background="?android:selectableItemBackground" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_general_sound_on_incoming_connection_request_description" style="@style/SubSettingsDescriptionHorizontalStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_general_sound_on_session_creation_active_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_general_sound_on_session_creation_active_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_general_sound_on_session_creation_active_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_general_sound_on_session_creation_layout" android:background="?android:selectableItemBackground" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_general_sound_on_session_creation_description" style="@style/SubSettingsDescriptionHorizontalStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_general_sound_on_session_close_active_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_general_sound_on_session_close_active_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_general_sound_on_session_close_active_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_general_sound_on_session_close_layout" android:background="?android:selectableItemBackground" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_general_sound_on_session_close_description" style="@style/SubSettingsDescriptionHorizontalStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/settings_group_general_chat_log" style="@style/SettingsGroupStyle">
+            <TextView android:id="@id/settings_general_title_chat_log" style="@style/SettingsTitleStyle" />
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_general_chat_log_layout" style="@style/SettingsRadioGroupStyle">
+                <LinearLayout android:id="@id/settings_general_chat_log_source_none_layout" style="@style/SettingsLineStyle">
+                    <TextView android:id="@id/settings_general_chat_log_source_none_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                    <RadioButton android:id="@id/settings_general_chat_log_source_none_radiobutton" style="@style/SettingsCheckboxStyle" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/settings_general_chat_log_source_auto_layout" style="@style/SettingsLineStyle">
+                    <TextView android:id="@id/settings_general_chat_log_source_auto_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                    <RadioButton android:id="@id/settings_general_chat_log_source_auto_radiobutton" style="@style/SettingsCheckboxStyle" />
+                </LinearLayout>
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/settings_group_general_online_status_receive" style="@style/SettingsGroupStyle">
+            <TextView android:id="@id/settings_general_title_online_status_receive" style="@style/SettingsTitleStyle" />
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_general_online_status_receive_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_general_online_status_receive_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_general_online_status_receive_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/settings_group_general_telemetry" style="@style/SettingsGroupStyle">
+            <TextView android:id="@id/settings_general_title_telemetry" style="@style/SettingsTitleStyle" />
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_general_telemetry_hint_layout" android:focusable="false" style="@style/SettingsLineStyle">
+                <TextView android:textColor="@color/colorSettingsTextHint" android:id="@id/settings_general_telemetry_hint" style="@style/SettingsDescriptionHorizontalStyle" />
+            </LinearLayout>
+            <TextView android:textColor="@color/colorSettingsText" android:id="@id/settings_general_telemetry_link" android:background="?android:selectableItemBackground" android:focusable="true" style="@style/SettingsHintStyle" />
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_general_telemetry_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_general_telemetry_checkbox_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_general_allow_telemetry_checkbox" android:focusable="true" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

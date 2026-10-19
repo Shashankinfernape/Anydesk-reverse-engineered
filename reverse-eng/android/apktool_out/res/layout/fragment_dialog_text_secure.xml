@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/settings_dialog_text_secure_layout" android:padding="@dimen/dialog_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.anydesk.anydeskandroid.gui.element.AdEditTextSecure android:id="@id/settings_dialog_text_secure_input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" app:textColor="@color/colorDialogText" app:textSize="@dimen/dialog_input_font_size" />
+    <TextView android:textColor="@color/colorTextInputStateRed" android:id="@id/settings_dialog_text_input_secure_state" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

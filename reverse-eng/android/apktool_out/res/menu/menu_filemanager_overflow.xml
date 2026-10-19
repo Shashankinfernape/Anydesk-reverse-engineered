@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu android:id="@id/menu_filemanager_overflow"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@id/menu_filemanager_overflow_group_dir" android:orderInCategory="100">
+        <item android:icon="@drawable/ic_filemanager_search" android:id="@id/menu_filemanager_overflow_search" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_filemanager_create_folder" android:id="@id/menu_filemanager_overflow_dir_create" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_filemanager_refresh" android:id="@id/menu_filemanager_overflow_refresh" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_filemanager_sort_ascending" android:id="@id/menu_filemanager_overflow_sort" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_filemanager_goto_folder" android:id="@id/menu_filemanager_overflow_dir_goto" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+    </group>
+    <group android:id="@id/menu_filemanager_overflow_group_file" android:orderInCategory="100">
+        <item android:icon="@drawable/ic_filemanager_delete" android:id="@id/menu_filemanager_overflow_delete" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_filemanager_properties" android:id="@id/menu_filemanager_overflow_properties" android:orderInCategory="100" app:iconTint="@color/colorPopupMenuIconTint" app:showAsAction="never" />
+    </group>
+</menu>

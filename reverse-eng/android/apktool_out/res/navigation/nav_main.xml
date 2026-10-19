@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/nav_main" app:startDestination="@id/mainFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.MainFragment" android:id="@id/mainFragment">
+        <action android:id="@id/action_mainFragment_to_abookFragment" app:destination="@id/abookFragment" />
+        <action android:id="@id/action_mainFragment_to_aboutFragment" app:destination="@id/aboutFragment" />
+        <action android:id="@id/action_mainFragment_to_supportFragment" app:destination="@id/supportFragment" />
+        <action android:id="@id/action_mainFragment_to_settingsFragment" app:destination="@id/settingsFragment" />
+        <action android:id="@id/action_mainFragment_to_connectionFragment" app:destination="@id/connectionFragment" />
+        <action android:id="@id/action_mainFragment_to_connectionSettingsFragmentVpnWrapper" app:destination="@id/connectionSettingsFragmentVpnWrapper" />
+        <action android:id="@id/action_mainFragment_to_connectionSettingsFragmentPermissionsWrapper" app:destination="@id/connectionSettingsFragmentPermissionsWrapper" />
+        <action android:id="@id/action_mainFragment_to_fileManagerFragment" app:destination="@id/fileManagerFragment" />
+        <action android:id="@id/action_mainFragment_to_accountLoginFragment" app:destination="@id/accountLoginFragment" />
+        <action android:id="@id/action_mainFragment_to_accountLoggedInFragment" app:destination="@id/accountLoggedInFragment" />
+        <action android:id="@id/action_mainFragment_to_setupFragment" app:destination="@id/setupFragment" />
+    </fragment>
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.SupportFragment" android:id="@id/supportFragment" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.TraceFragment" android:id="@id/traceFragment" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.AboutFossFragment" android:id="@id/aboutFossFragment" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.AboutFragment" android:id="@id/aboutFragment">
+        <action android:id="@id/action_aboutFragment_to_supportFragment" app:destination="@id/supportFragment" />
+        <action android:id="@id/action_aboutFragment_to_traceFragment" app:destination="@id/traceFragment" />
+        <action android:id="@id/action_aboutFragment_to_aboutFossFragment" app:destination="@id/aboutFossFragment" />
+    </fragment>
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.ConnectionFragment" android:id="@id/connectionFragment">
+        <action android:id="@id/action_connectionFragment_to_connectionSettingsFragment" app:destination="@id/connectionSettingsFragment" />
+        <action android:id="@id/action_connectionFragment_to_SessionInfoFragment" app:destination="@id/sessionInfoFragment" />
+        <action android:id="@id/action_connectionFragment_to_TcpTunnelFragment" app:destination="@id/tcpTunnelFragment" />
+        <action android:id="@id/action_connectionFragment_to_FileManagerFragment" app:destination="@id/fileManagerFragment" />
+    </fragment>
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.AbookFragment" android:id="@id/abookFragment">
+        <action android:id="@id/action_abookFragment_to_abookRosterItemDetailsFragmentWrapper" app:destination="@id/abookRosterItemDetailsWrapper" />
+    </fragment>
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.AbookRosterItemDetailsFragmentWrapper" android:id="@id/abookRosterItemDetailsWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.SettingsFragment" android:id="@id/settingsFragment">
+        <action android:id="@id/action_settingsFragment_to_settingsFragmentGeneralWrapper" app:destination="@id/settingsFragmentGeneralWrapper" />
+        <action android:id="@id/action_settingsFragment_to_settingsFragmentVpnWrapper" app:destination="@id/settingsFragmentVpnWrapper" />
+        <action android:id="@id/action_settingsFragment_to_settingsFragmentConnectionWrapper" app:destination="@id/settingsFragmentConnectionWrapper" />
+        <action android:id="@id/action_settingsFragment_to_settingsFragmentAccessWrapper" app:destination="@id/settingsFragmentAccessWrapper" />
+        <action android:id="@id/action_settingsFragment_to_settingsFragmentPermissionsWrapper" app:destination="@id/settingsFragmentPermissionsWrapper" />
+        <action android:id="@id/action_settingsFragment_to_settingsFragmentRecordingWrapper" app:destination="@id/settingsFragmentRecordingWrapper" />
+        <action android:id="@id/action_settingsFragment_to_settingsFragmentInputWrapper" app:destination="@id/settingsFragmentInputWrapper" />
+        <action android:id="@id/action_settingsFragment_to_settingsFragmentVideoWrapper" app:destination="@id/settingsFragmentVideoWrapper" />
+        <action android:id="@id/action_settingsFragment_to_settingsFragmentIdentityWrapper" app:destination="@id/settingsFragmentIdentityWrapper" />
+        <action android:id="@id/action_settingsFragment_to_settingsFragmentAudioWrapper" app:destination="@id/settingsFragmentAudioWrapper" />
+    </fragment>
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.SettingsFragmentAudioWrapper" android:id="@id/settingsFragmentAudioWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.SettingsFragmentVpnWrapper" android:id="@id/settingsFragmentVpnWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.SettingsFragmentConnectionWrapper" android:id="@id/settingsFragmentConnectionWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.SettingsFragmentGeneralWrapper" android:id="@id/settingsFragmentGeneralWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.SettingsFragmentInputWrapper" android:id="@id/settingsFragmentInputWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.SettingsFragmentIdentityWrapper" android:id="@id/settingsFragmentIdentityWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.SettingsFragmentRecordingWrapper" android:id="@id/settingsFragmentRecordingWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.SettingsFragmentAccessWrapper" android:id="@id/settingsFragmentAccessWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.SettingsFragmentPermissionsWrapper" android:id="@id/settingsFragmentPermissionsWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.SettingsFragmentVideoWrapper" android:id="@id/settingsFragmentVideoWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.SessionInfoFragment" android:id="@id/sessionInfoFragment" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.TcpTunnelFragment" android:id="@id/tcpTunnelFragment" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.ConnectionSettingsFragment" android:id="@id/connectionSettingsFragment">
+        <action android:id="@id/action_connectionSettingsFragment_to_connectionSettingsFragmentInputWrapper" app:destination="@id/connectionSettingsFragmentInputWrapper" />
+        <action android:id="@id/action_connectionSettingsFragment_to_connectionSettingsFragmentVideoWrapper" app:destination="@id/connectionSettingsFragmentVideoWrapper" />
+        <action android:id="@id/action_connectionSettingsFragment_to_connectionSettingsFragmentAudioWrapper" app:destination="@id/connectionSettingsFragmentAudioWrapper" />
+        <action android:id="@id/action_connectionSettingsFragment_to_connectionSettingsFragmentVpnWrapper" app:destination="@id/connectionSettingsFragmentVpnWrapper" />
+        <action android:id="@id/action_connectionSettingsFragment_to_connectionSettingsFragmentPermissionsWrapper" app:destination="@id/connectionSettingsFragmentPermissionsWrapper" />
+    </fragment>
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.ConnectionSettingsFragmentAudioWrapper" android:id="@id/connectionSettingsFragmentAudioWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.ConnectionSettingsFragmentInputWrapper" android:id="@id/connectionSettingsFragmentInputWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.ConnectionSettingsFragmentVideoWrapper" android:id="@id/connectionSettingsFragmentVideoWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.ConnectionSettingsFragmentVpnWrapper" android:id="@id/connectionSettingsFragmentVpnWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.ConnectionSettingsFragmentPermissionsWrapper" android:id="@id/connectionSettingsFragmentPermissionsWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.FileManagerFragment" android:id="@id/fileManagerFragment">
+        <action android:id="@id/action_fileManagerFragment_to_fileManagerProgressListFragmentWrapper" app:destination="@id/fileManagerProgressListFragmentWrapper" />
+    </fragment>
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.FileManagerProgressListFragmentWrapper" android:id="@id/fileManagerProgressListFragmentWrapper" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.AccountLoginFragment" android:id="@id/accountLoginFragment">
+        <action android:id="@id/action_accountLoginFragment_to_accountRegistrationFragment" app:destination="@id/accountRegistrationFragment" />
+    </fragment>
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.AccountRegistrationFragment" android:id="@id/accountRegistrationFragment" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.AccountLoggedInFragment" android:id="@id/accountLoggedInFragment" />
+    <fragment android:label="" android:name="com.anydesk.anydeskandroid.gui.fragment.SetupFragment" android:id="@id/setupFragment">
+        <action android:id="@id/action_setupFragment_to_traceFragment" app:destination="@id/traceFragment" />
+    </fragment>
+</navigation>

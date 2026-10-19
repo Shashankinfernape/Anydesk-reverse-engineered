@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="@dimen/filemanager_custom_snackbar_height" app:cardBackgroundColor="@color/colorFileManagerCustomSnackbar" app:cardCornerRadius="@dimen/card_corner_radius_default" app:cardElevation="@dimen/filemanager_custom_snackbar_elevation" app:cardPreventCornerOverlap="false" app:contentPaddingBottom="0.0dip" app:contentPaddingLeft="16.0dip" app:contentPaddingRight="16.0dip" app:contentPaddingTop="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center|right" android:orientation="horizontal" android:id="@id/filemanager_snackbar_dest_container" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@id/filemanager_snackbar_button_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.MaterialComponents.Button.TextButton.Dialog" />
+        <Button android:id="@id/filemanager_snackbar_button_transfer" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.MaterialComponents.Button.TextButton.Dialog" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

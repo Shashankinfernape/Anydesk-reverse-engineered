@@ -1,4 +1,5 @@
 # Build outputs
+target/
 build/
 build_msvc32/
 bin/
@@ -21,6 +22,14 @@ apktool_src/build/
 release/
 *.apk
 *.exe
+
+# Duplicate test binary dumps in reverse-eng
+reverse-eng/windows/proper_*
+reverse-eng/windows/test_*
+reverse-eng/windows/AnyDesk_unpacked_core.dll
+reverse-eng/android/anydesk_rebuilt.apk
+reverse-eng/android/apktool_out/lib/
+reverse-eng/android/extracted/
 
 # OS generated
 .DS_Store

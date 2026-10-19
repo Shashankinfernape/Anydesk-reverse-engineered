@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/settings_input_scroll_view" android:background="@color/colorMainBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/settings_input_container" style="@style/SettingsGroupStyle">
+        <LinearLayout android:id="@id/settings_input_auto_keyboard_layout" style="@style/SettingsLineStyle">
+            <TextView android:id="@id/settings_input_auto_keyboard_description" style="@style/SettingsDescriptionHorizontalStyle" />
+            <CheckBox android:id="@id/settings_input_auto_keyboard_checkbox" style="@style/SettingsCheckboxStyle" />
+        </LinearLayout>
+        <FrameLayout style="@style/HorizontalDividerStyle" />
+        <LinearLayout android:id="@id/settings_group_touch_mode" style="@style/SettingsGroupStyle">
+            <TextView android:id="@id/settings_input_title_touch_mode" style="@style/SettingsTitleStyle" />
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_input_touch_mode_layout" style="@style/SettingsRadioGroupStyle">
+                <LinearLayout android:id="@id/settings_input_touch_mode_mouse_layout" style="@style/SettingsLineStyle">
+                    <TextView android:id="@id/settings_input_touch_mode_mouse_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                    <RadioButton android:id="@id/settings_input_touch_mode_mouse_radiobutton" style="@style/SettingsCheckboxStyle" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/settings_input_touch_mode_touchpad_layout" style="@style/SettingsLineStyle">
+                    <TextView android:id="@id/settings_input_touch_mode_touchpad_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                    <RadioButton android:id="@id/settings_input_touch_mode_touchpad_radiobutton" style="@style/SettingsCheckboxStyle" />
+                </LinearLayout>
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_input_auto_touch_to_touch_mode_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_input_auto_touch_to_touch_mode_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_input_auto_touch_to_touch_mode_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+            <LinearLayout android:id="@id/settings_input_inject_mouse_as_touch_layout" style="@style/SettingsLineStyle">
+                <TextView android:id="@id/settings_input_inject_mouse_as_touch_description" style="@style/SettingsDescriptionHorizontalStyle" />
+                <CheckBox android:id="@id/settings_input_inject_mouse_as_touch_checkbox" style="@style/SettingsCheckboxStyle" />
+            </LinearLayout>
+            <FrameLayout style="@style/HorizontalDividerStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -28,17 +28,34 @@ Anydesk-reverse-engineered/
 │   ├── build_apk.bat                  # 1-click APK build & sign script
 │   └── README.md                      # DeskRTCaptureBridge documentation
 │
-└── AnyDesk-Windows-Reconstructed/     # Windows Reconstruction
-    ├── src/                           # C++ loader, PE mapper, and codec hooks
-    │   ├── core/win_app.dll           # Unpacked AnyDesk core engine (30.9 MB)
-    │   ├── hooks/                     # DeskRT & Relay in-memory hooking engines
-    │   └── loader/                    # PE manual mapper, LCG cipher, BCJ filter
-    ├── include/                       # DeskRT packet headers, tile engine constants
-    ├── resources/                     # Authenticode-ready manifest and RC version info
-    ├── scripts/                       # Repacker, BCJ filter, and verification suite
-    ├── CMakeLists.txt                 # MSVC 32-bit Win32 CMake build definition
-    ├── build_exe.bat                  # 1-click standalone executable repacker
-    └── README.md                      # Windows hooks and CLI usage
+├── AnyDesk-Windows-Reconstructed/     # Windows Reconstruction
+│   ├── src/                           # C++ loader, PE mapper, and codec hooks
+│   │   ├── core/win_app.dll           # Unpacked AnyDesk core engine (30.9 MB)
+│   │   ├── hooks/                     # DeskRT & Relay in-memory hooking engines
+│   │   └── loader/                    # PE manual mapper, LCG cipher, BCJ filter
+│   ├── include/                       # DeskRT packet headers, tile engine constants
+│   ├── resources/                     # Authenticode-ready manifest and RC version info
+│   ├── scripts/                       # Repacker, BCJ filter, and verification suite
+│   ├── CMakeLists.txt                 # MSVC 32-bit Win32 CMake build definition
+│   ├── build_exe.bat                  # 1-click standalone executable repacker
+│   └── README.md                      # Windows hooks and CLI usage
+│
+├── directlink-core/                   # Clean-room Rust Core Engine
+│   ├── src/                           # Transport, mux, crypto, messages, capabilities
+│   └── Cargo.toml                     # Native 5-channel multiplexer & candidate racer
+│
+├── docs/                              # REA Reverse Engineering Blueprint
+│   ├── ANYDESK_REPLICATION_MASTER_PLAN.md # Architectural specification & roadmap
+│   └── DECOMPILED_CORE_EVIDENCE.md        # Ghidra pseudocode, crypto constants, memory layouts
+│
+├── reverse-eng/                       # REA Analysis & Ghidra Snapshot Artifacts
+│   ├── android/                       # ARM64 ELF libadext.so exports, JNI class graphs
+│   └── windows/                       # Windows x86 unpacker evidence, PE snapshots
+│
+└── scripts/                           # Reverse Engineering & Repack Suite
+    ├── repack_anydesk.py              # Injects and compresses raw core into PE stub
+    ├── apply_bcj.py / bcj_filter.py   # x86 Branch / Call / Jump normalization
+    └── LzmaDec.c / verify_decoder.c   # LZMA raw stream decompressor
 ```
 
 ---

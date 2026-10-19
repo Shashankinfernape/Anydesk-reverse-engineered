@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@style/AppThemeBase">
+        <item name="android:navigationBarColor">@color/colorNavigationBar</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="@style/ThemeOverlay.MaterialComponents.Dark">
+        <item name="android:colorControlHighlight">@color/colorControlHighlight</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+    <style name="Theme.MaterialComponents.DayNight" parent="@style/Theme.MaterialComponents" />
+    <style name="ThemeOverlay.AppCompat.DayNight" parent="@style/ThemeOverlay.AppCompat.Dark" />
+</resources>

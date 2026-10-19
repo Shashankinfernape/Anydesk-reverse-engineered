@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center" android:id="@id/motd_dialog_frame" android:focusable="true" android:nextFocusUp="@id/motd_dialog_close_clickable_area" android:nextFocusDown="@id/motd_dialog_close_clickable_area" android:clickable="true" android:layout_width="250.0dip" android:layout_height="200.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/motd_dialog_image" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/motd_dialog_text_container" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip">
+        <TextView android:textStyle="bold" android:layout_gravity="center_vertical" android:id="@id/motd_dialog_title" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/motd_dialog_text" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+    </LinearLayout>
+    <FrameLayout android:layout_gravity="end|center|top" android:id="@id/motd_dialog_close_clickable_area" android:background="@drawable/circular_progress_bar_background" android:padding="12.0dip" android:focusable="true" android:nextFocusUp="@id/motd_dialog_frame" android:nextFocusDown="@id/motd_dialog_frame" android:clickable="true" android:layout_width="@dimen/motd_dialog_close_clickable_area_size" android:layout_height="@dimen/motd_dialog_close_clickable_area_size">
+        <ProgressBar android:id="@id/motd_dialog_progress_bar" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:max="100" android:progress="25" android:indeterminate="false" android:progressDrawable="@drawable/circular_progress_bar" style="?android:progressBarStyleHorizontal" />
+        <ImageView android:id="@id/motd_dialog_close_top_right" android:padding="3.0dip" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:tint="@color/colorPrimary" app:srcCompat="@drawable/ic_anymessage_exit" />
+    </FrameLayout>
+</FrameLayout>

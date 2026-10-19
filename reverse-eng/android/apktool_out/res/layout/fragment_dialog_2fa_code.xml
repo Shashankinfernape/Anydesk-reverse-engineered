@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/dialog_2fa_code_layout" android:padding="@dimen/dialog_padding" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/colorDialogText" android:layout_gravity="start" android:id="@id/dialog_2fa_code_title" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_input_margin_top" android:textIsSelectable="true" />
+    <com.anydesk.anydeskandroid.gui.element.AdEditText android:id="@id/dialog_2fa_code_input" android:layout_width="fill_parent" android:layout_height="wrap_content" app:inputType="number" app:textColor="@color/colorDialogText" app:textSize="@dimen/dialog_input_font_size" />
+</LinearLayout>
