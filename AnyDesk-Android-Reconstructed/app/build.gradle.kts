@@ -11,8 +11,8 @@ android {
         applicationId = "com.anydesk.anydeskandroid"
         minSdk = 21
         targetSdk = 34
-        versionCode = 90902
-        versionName = "9.9.1-handesk"
+        versionCode = 90999
+        versionName = "9.9.9-handesk"
 
         ndk {
             abiFilters.addAll(listOf("arm64-v8a"))
@@ -47,6 +47,9 @@ android {
 
     sourceSets {
         getByName("main") {
+            manifest.srcFile("src/main/AndroidManifest.xml")
+            java.srcDirs("src/main/java")
+            res.srcDirs("src/main/res")
             jniLibs.srcDirs("src/main/jniLibs")
         }
     }
@@ -68,9 +71,13 @@ tasks.withType<JavaCompile>().configureEach {
 afterEvaluate {
     fun syncApk() {
         val rootDir = rootProject.projectDir
-        project.exec {
-            workingDir = rootDir
-            commandLine("cmd", "/c", "${rootDir}\\build_apk.bat")
+        val pb = ProcessBuilder("cmd", "/c", "${rootDir}\\build_apk.bat")
+        pb.directory(rootDir)
+        pb.inheritIO()
+        val proc = pb.start()
+        val exitCode = proc.waitFor()
+        if (exitCode != 0) {
+            throw GradleException("build_apk.bat failed with exit code $exitCode")
         }
         val releaseApk = file("${rootDir}/release/AnyHandesk.apk")
         val buildDir = layout.buildDirectory.asFile.get()
