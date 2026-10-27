@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 echo ========================================================
-echo  AnyDesk Android APK Rebuilder and Signer
+echo  AnyHandesk Android APK Builder (Tailscale + LAN)
 echo ========================================================
 
 set SCRIPT_DIR=%~dp0
@@ -19,28 +19,29 @@ if not exist "%APKSIGNER%" (
     )
 )
 
-echo [1/3] Building APK with Apktool...
-java -jar "%APKTOOL_JAR%" b "%SCRIPT_DIR%apktool_src" -o "%SCRIPT_DIR%AnyDesk_unsigned.apk"
+echo [1/3] Building APK with Apktool (Clean and Force Rebuild)...
+if exist "%SCRIPT_DIR%apktool_src\build" rd /s /q "%SCRIPT_DIR%apktool_src\build"
+java -jar "%APKTOOL_JAR%" b -f "%SCRIPT_DIR%apktool_src" -o "%SCRIPT_DIR%AnyHandesk_unsigned.apk"
 if errorlevel 1 (
     echo [ERROR] Apktool build failed!
     exit /b 1
 )
 
 echo [2/3] Signing APK with debug keystore...
-cmd /c "%APKSIGNER% sign --ks \"%KEYSTORE%\" --ks-pass pass:android --key-pass pass:android --out \"%SCRIPT_DIR%AnyDesk.apk\" \"%SCRIPT_DIR%AnyDesk_unsigned.apk\""
+call "%APKSIGNER%" sign --ks "%KEYSTORE%" --ks-pass pass:android --key-pass pass:android --out "%SCRIPT_DIR%AnyHandesk.apk" "%SCRIPT_DIR%AnyHandesk_unsigned.apk"
 if errorlevel 1 (
     echo [ERROR] Signing failed!
     exit /b 1
 )
 
-if exist "%SCRIPT_DIR%AnyDesk_unsigned.apk" del "%SCRIPT_DIR%AnyDesk_unsigned.apk"
+if exist "%SCRIPT_DIR%AnyHandesk_unsigned.apk" del "%SCRIPT_DIR%AnyHandesk_unsigned.apk"
 
 echo [3/3] Copying to release folder...
 if not exist "%SCRIPT_DIR%release" mkdir "%SCRIPT_DIR%release"
-copy /y "%SCRIPT_DIR%AnyDesk.apk" "%SCRIPT_DIR%release\AnyDesk.apk"
-if exist "%SCRIPT_DIR%AnyDesk.apk.idsig" copy /y "%SCRIPT_DIR%AnyDesk.apk.idsig" "%SCRIPT_DIR%release\AnyDesk.apk.idsig"
+copy /y "%SCRIPT_DIR%AnyHandesk.apk" "%SCRIPT_DIR%release\AnyHandesk.apk"
+if exist "%SCRIPT_DIR%AnyHandesk.apk.idsig" copy /y "%SCRIPT_DIR%AnyHandesk.apk.idsig" "%SCRIPT_DIR%release\AnyHandesk.apk.idsig"
 
 echo ========================================================
-echo  SUCCESS: AnyDesk.apk generated and signed!
-echo  Release: %SCRIPT_DIR%release\AnyDesk.apk
+echo  SUCCESS: AnyHandesk.apk generated and signed!
+echo  Release: %SCRIPT_DIR%release\AnyHandesk.apk
 echo ========================================================

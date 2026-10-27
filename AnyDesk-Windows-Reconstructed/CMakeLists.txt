@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(AnyDeskHost LANGUAGES C CXX)
+project(AnyHandeskHost LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -30,21 +30,25 @@ set(SOURCES
     src/loader/pe_mapper.cpp
     src/hooks/relay_hook.cpp
     src/hooks/deskrt_hook.cpp                   # DeskRT video codec hooks
+    src/hooks/tailscale_hook.cpp                # Tailscale + LAN P2P direct hooks
 )
 
 if (MSVC)
     list(APPEND SOURCES resources/AnyDesk.rc)
 endif()
 
-# CLI flags added by DeskRT integration:
+# CLI flags supported:
+#   --port <n>        override direct P2P listening port (default 7070)
+#   --console         display live P2P network status console
+#   --p2p-info        display detected Tailscale & LAN addresses
 #   --relay <host>    redirect AnyNet relay server
 #   --lossless        force DeskRT capability bit 33 (lossless RLE+LZ codec)
 #   --fps <n>         cap captured FPS before encoding
 
-add_executable(AnyDesk_Reconstructed ${SOURCES})
+add_executable(AnyHandesk ${SOURCES})
 
 # Required Windows system libraries
-target_link_libraries(AnyDesk_Reconstructed PRIVATE
+target_link_libraries(AnyHandesk PRIVATE
     kernel32
     user32
     gdi32
@@ -53,11 +57,12 @@ target_link_libraries(AnyDesk_Reconstructed PRIVATE
     ws2_32
     crypt32
     version
+    iphlpapi
 )
 
 # Post-build: copy core DLL next to executable
-add_custom_command(TARGET AnyDesk_Reconstructed POST_BUILD
+add_custom_command(TARGET AnyHandesk POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
     ${CMAKE_CURRENT_SOURCE_DIR}/src/core/win_app.dll
-    $<TARGET_FILE_DIR:AnyDesk_Reconstructed>/win_app.dll
+    $<TARGET_FILE_DIR:AnyHandesk>/win_app.dll
 )

@@ -1,6 +1,21 @@
-# AnyDesk Reverse-Engineered & Reconstructed
+# AnyDesk Reverse-Engineered — Decentralized P2P Remote Desktop (Tailscale + LAN)
 
-Complete clean-room reverse-engineering, decompilation, architectural reconstruction, and build toolchains for **AnyDesk Windows** and **AnyDesk Android**, including native **DeskRT video codec hooks**, in-memory relocations, and standalone packager pipelines.
+Complete clean-room reverse-engineering, decompilation, and architectural reconstruction for **AnyDesk Windows** and **AnyDesk Android**, featuring native **DeskRT 32×32 tile video differential compression** and **zero-relay peer-to-peer remote access over Tailscale Mesh (`100.64.0.0/10`) and Local LAN (`192.168.x.x` / `10.x.x.x`)**.
+
+Official AnyDesk cloud rendezvous servers (`boot.net.anydesk.com`, `relay.net.anydesk.com`) are intercepted and neutralized at the binary and socket level, eliminating cloud tracking, commercial license banners, and session timeouts.
+
+---
+
+## Supported Connection Topologies
+
+Because both Windows (`win_app.dll`) and Android (`libadext.so`) run full bidirectional AnyDesk engines, every node operates simultaneously as a **Host (Server)** and **Client (Viewer)**:
+
+| Mode | Host (Server) | Client (Viewer) | How to Connect |
+|:---:|:---:|:---:|---|
+| **PC to PC** | Windows PC #1 | Windows PC #2 | PC #2 enters PC #1's Tailscale IP (`100.x.y.z:7070`) in the address bar. Full mouse, keyboard, and DeskRT video stream. |
+| **Phone to PC** | Android Phone | Windows PC | PC enters Android phone's Tailscale IP (`100.x.y.z:7070`). Android grants MediaProjection + Accessibility; PC views and controls phone with mouse. |
+| **PC to Phone** | Windows PC | Android Phone | Android phone enters PC's Tailscale IP (`100.x.y.z:7070`). Android views and touches PC desktop. |
+| **Phone to Phone**| Android Phone #1 | Android Phone #2 | Direct Android-to-Android remote assistance over Tailscale mesh. |
 
 ---
 
@@ -8,8 +23,8 @@ Complete clean-room reverse-engineering, decompilation, architectural reconstruc
 
 Pre-built and signed release binaries are available under [Releases](https://github.com/Shashankinfernape/Anydesk-reverse-engineered/releases):
 
-* **Android Package**: [`AnyDesk.apk`](https://github.com/Shashankinfernape/Anydesk-reverse-engineered/releases/latest/download/AnyDesk.apk) (48.0 MB, signed with debug keystore, v1 + v2 scheme)
-* **Windows Executable**: [`AnyDesk.exe`](https://github.com/Shashankinfernape/Anydesk-reverse-engineered/releases/latest/download/AnyDesk.exe) (8.53 MB standalone binary with genuine AnyDesk GUI)
+* **Android Package**: [`AnyHandesk.apk`](https://github.com/Shashankinfernape/Anydesk-reverse-engineered/releases/latest/download/AnyHandesk.apk) (48 MB, signed with debug keystore, v1 + v2 scheme)
+* **Windows Executable**: [`AnyHandesk.exe`](https://github.com/Shashankinfernape/Anydesk-reverse-engineered/releases/latest/download/AnyHandesk.exe) (8.53 MB standalone binary with genuine AnyDesk GUI and Tailscale hooks)
 
 ---
 
@@ -17,27 +32,32 @@ Pre-built and signed release binaries are available under [Releases](https://git
 
 ```
 Anydesk-reverse-engineered/
-├── AnyDesk-Android-Reconstructed/     # Android Reconstruction
+├── AnyDesk-Android-Reconstructed/     # Android Reconstruction (Client & Host)
 │   ├── app/                           # Gradle project with 3,094 Java source files
-│   │   ├── src/main/java/             # Clean JADX decompiled sources
-│   │   ├── src/main/jniLibs/          # Native arm64-v8a, armeabi-v7a, x86, x86_64
-│   │   ├── src/main/res/              # XML layouts, drawables, localized strings
+│   │   ├── src/main/java/com/anydesk/jni/
+│   │   │   ├── P2PConnectionBridge.java # Tailscale/LAN Auto-discovery & Direct Connect
+│   │   │   └── DeskRTCaptureBridge.java # 32x32 Tile Differential Interceptor
+│   │   ├── src/main/jniLibs/          # Native arm64-v8a, armeabi-v7a, x86, x86_64 libadext.so
 │   │   └── src/main/AndroidManifest.xml
 │   ├── apktool_src/                   # Apktool Smali & resource reconstruction
 │   ├── build.gradle.kts               # Android Gradle build script
 │   ├── build_apk.bat                  # 1-click APK build & sign script
-│   └── README.md                      # DeskRTCaptureBridge documentation
+│   └── README.md                      # Android interception & capture docs
 │
-├── AnyDesk-Windows-Reconstructed/     # Windows Reconstruction
+├── AnyDesk-Windows-Reconstructed/     # Windows Reconstruction (Client & Host)
 │   ├── src/                           # C++ loader, PE mapper, and codec hooks
 │   │   ├── core/win_app.dll           # Unpacked AnyDesk core engine (30.9 MB)
-│   │   ├── hooks/                     # DeskRT & Relay in-memory hooking engines
+│   │   ├── hooks/                     # Tailscale, DeskRT & Relay in-memory hooking engines
+│   │   │   ├── tailscale_hook.cpp     # Auto-detects 100.x.x.x, removes banners & timeouts
+│   │   │   ├── deskrt_hook.cpp        # Intercepts win_deskrt_encoder_init & caller
+│   │   │   └── relay_hook.cpp         # In-memory relay redirector
 │   │   └── loader/                    # PE manual mapper, LCG cipher, BCJ filter
 │   ├── include/                       # DeskRT packet headers, tile engine constants
 │   ├── resources/                     # Authenticode-ready manifest and RC version info
 │   ├── scripts/                       # Repacker, BCJ filter, and verification suite
 │   ├── CMakeLists.txt                 # MSVC 32-bit Win32 CMake build definition
 │   ├── build_exe.bat                  # 1-click standalone executable repacker
+│   ├── start_anyhandesk.bat           # 1-click launcher with status banner
 │   └── README.md                      # Windows hooks and CLI usage
 │
 ├── directlink-core/                   # Clean-room Rust Core Engine
@@ -78,6 +98,30 @@ Both Windows (`win_app.dll`) and Android (`libadext.so`) share the core **DeskRT
 ### 3. Capability Bitmask
 * **Bit 33** (`0x0000000200000000`): **Lossless mode** — completely bypasses DCT lossy quantization; enforces RLE + LZ dictionary compression.
 * **Bit 37** (`0x0000002000000000`): **Adaptive quality** — dynamically scales quantization matrices based on round-trip latency and packet loss.
+
+---
+
+## Usage Guide
+
+### 1. Windows Host / Client
+```bat
+cd AnyDesk-Windows-Reconstructed
+
+# View detected Tailscale (100.x.x.x) and LAN (192.168.x.x) endpoints:
+AnyHandesk.exe --p2p-info
+
+# Launch with status console and listen on port 7070:
+AnyHandesk.exe --console --port 7070
+
+# Optional: Force lossless video mode:
+AnyHandesk.exe --console --port 7070 --lossless
+```
+
+### 2. Android Client / Host
+1. Install `AnyHandesk.apk` on your Android device.
+2. Ensure Tailscale VPN is connected (or both devices are on the same Wi-Fi / hotspot).
+3. **To control PC from Phone:** Enter the PC's Tailscale IP (`100.x.y.z:7070`) and tap Connect.
+4. **To control Phone from PC:** Enter the phone's Tailscale IP in `AnyHandesk.exe` on Windows and tap Connect. Accept the prompt on Android to begin streaming.
 
 ---
 

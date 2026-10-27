@@ -11,11 +11,15 @@ android {
         applicationId = "com.anydesk.anydeskandroid"
         minSdk = 21
         targetSdk = 34
-        versionCode = 90706
-        versionName = "9.7.6"
+        versionCode = 90902
+        versionName = "9.9.1-handesk"
 
         ndk {
             abiFilters.addAll(listOf("arm64-v8a"))
+        }
+
+        vectorDrawables {
+            useSupportLibrary = true
         }
     }
 
@@ -55,8 +59,38 @@ android {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.13.1")
-    implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+}
+
+tasks.withType<JavaCompile>().configureEach {
+    enabled = false
+}
+
+afterEvaluate {
+    fun syncApk() {
+        val rootDir = rootProject.projectDir
+        project.exec {
+            workingDir = rootDir
+            commandLine("cmd", "/c", "${rootDir}\\build_apk.bat")
+        }
+        val releaseApk = file("${rootDir}/release/AnyHandesk.apk")
+        val buildDir = layout.buildDirectory.asFile.get()
+        val interApk = file("${buildDir}/intermediates/apk/debug/app-debug.apk")
+        val outApk = file("${buildDir}/outputs/apk/debug/app-debug.apk")
+        interApk.parentFile.mkdirs()
+        outApk.parentFile.mkdirs()
+        if (releaseApk.exists()) {
+            releaseApk.copyTo(interApk, overwrite = true)
+            releaseApk.copyTo(outApk, overwrite = true)
+            val idsig = file("${rootDir}/release/AnyHandesk.apk.idsig")
+            if (idsig.exists()) {
+                val interIdsig = file("${buildDir}/intermediates/apk/debug/app-debug.apk.idsig")
+                val outIdsig = file("${buildDir}/outputs/apk/debug/app-debug.apk.idsig")
+                idsig.copyTo(interIdsig, overwrite = true)
+                idsig.copyTo(outIdsig, overwrite = true)
+            }
+        }
+    }
+
+    tasks.findByName("packageDebug")?.doLast { syncApk() }
+    tasks.findByName("assembleDebug")?.doLast { syncApk() }
 }

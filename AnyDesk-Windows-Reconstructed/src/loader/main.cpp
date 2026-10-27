@@ -4,8 +4,9 @@
 #include <iostream>
 #include "pe_mapper.h"
 #include "relay_hook.h"
-#include "deskrt_hook.h"     // DeskRT video codec hooks
-#include "deskrt_codec.h"    // DeskRT tile / packet / capability definitions
+#include "deskrt_hook.h"      // DeskRT video codec hooks
+#include "deskrt_codec.h"     // DeskRT tile / packet / capability definitions
+#include "tailscale_hook.h"   // Tailscale + LAN P2P direct hooks
 
 // AnyDesk entry point typedef
 typedef int (WINAPI* LoaderEntryThunkFn)(void* ldrThunkData);
@@ -30,12 +31,21 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
 
     bool forceLossless = false;
     int  fpsCap        = 0;
+    bool showConsole   = false;
+    bool infoOnly      = false;
+    bool offlineMode   = false;
 
     for (int i = 1; i < argc; ++i) {
         if (wcscmp(argv[i], L"--relay") == 0 && i + 1 < argc) {
             char relayHost[256] = {0};
             WideCharToMultiByte(CP_ACP, 0, argv[++i], -1, relayHost, sizeof(relayHost) - 1, nullptr, nullptr);
             RelayHook::setCustomRelay(relayHost);
+        }
+        else if (wcscmp(argv[i], L"--port") == 0 && i + 1 < argc) {
+            int port = _wtoi(argv[++i]);
+            if (port > 0 && port <= 65535) {
+                TailscaleHook::setDirectPort(static_cast<uint16_t>(port));
+            }
         }
         else if (wcscmp(argv[i], L"--lossless") == 0) {
             // Force DeskRT capability bit 33: disables DCT, uses RLE+LZ
@@ -45,9 +55,38 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
             // Cap outgoing FPS (e.g. --fps 15)
             fpsCap = _wtoi(argv[++i]);
         }
+        else if (wcscmp(argv[i], L"--offline") == 0 || wcscmp(argv[i], L"--neutralize") == 0) {
+            offlineMode = true;
+        }
+        else if (wcscmp(argv[i], L"--console") == 0) {
+            showConsole = true;
+        }
+        else if (wcscmp(argv[i], L"--p2p-info") == 0) {
+            showConsole = true;
+            infoOnly = true;
+        }
     }
 
     if (argv) LocalFree(argv);
+
+    if (showConsole) {
+        HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+        if (hStdOut == nullptr || hStdOut == INVALID_HANDLE_VALUE || GetFileType(hStdOut) == FILE_TYPE_UNKNOWN) {
+            if (!AttachConsole(ATTACH_PARENT_PROCESS)) {
+                AllocConsole();
+            }
+            FILE* fDummy;
+            freopen_s(&fDummy, "CONOUT$", "w", stdout);
+            freopen_s(&fDummy, "CONOUT$", "w", stderr);
+            std::cout.clear();
+            std::cerr.clear();
+        }
+    }
+
+    if (infoOnly) {
+        TailscaleHook::printStatusBanner();
+        return 0;
+    }
 
     // 2. Locate and map win_app.dll
     std::wstring dllPath = getCoreDllPath();
@@ -64,16 +103,24 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
         if (!mapper.loadFromFile(fallback)) {
             MessageBoxW(nullptr,
                 L"Failed to load core library 'win_app.dll'.\nPlease ensure it exists next to the executable.",
-                L"AnyDesk Reconstructed Loader Error",
+                L"AnyHandesk Loader Error",
                 MB_ICONERROR | MB_OK);
             return 1;
         }
     }
 
-    // 3. Apply Relay Redirect Hooks (if configured)
+    // 3. Apply Tailscale & LAN P2P Hooks (Neutralize AnyDesk cloud servers only if --offline flag is set)
+    if (offlineMode) {
+        TailscaleHook::applyCloudNeutralization(mapper.getBaseAddress(), 30901248);
+    }
+
+    // Always neutralize and strip Free License banner
+    TailscaleHook::applyLicenseBannerRemoval(mapper.getBaseAddress(), 30901248);
+
+    // 4. Apply custom relay if configured
     RelayHook::applyInMemoryPatches(mapper.getBaseAddress(), 30901248);
 
-    // 4. Install DeskRT codec hooks (only if requested)
+    // 5. Install DeskRT codec hooks (only if lossless or fps cap is active)
     if (forceLossless || fpsCap > 0) {
         DeskRTHook::install(mapper.getBaseAddress(), 30901248);
         if (forceLossless) {
@@ -84,16 +131,11 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
         }
     }
 
-    // Optional: register a frame callback for watermarking or logging
-    // DeskRTHook::setFrameCallback([](uint8_t* px, int w, int h, int stride) -> bool {
-    //     // stamp bottom-right corner white
-    //     for (int y = h - 8; y < h; ++y)
-    //         for (int x = w - 8; x < w; ++x)
-    //             *(uint32_t*)(px + y * stride + x * 4) = 0xFFFFFFFF;
-    //     return true;
-    // });
+    if (showConsole) {
+        TailscaleHook::printStatusBanner();
+    }
 
-    // 5. Resolve exported thunks
+    // 6. Resolve exported thunks
     FARPROC entryThunk = mapper.getExport("loader_entry_thread_thunk");
     FARPROC thunkData  = mapper.getExport("ldr_thunk_data");
 
